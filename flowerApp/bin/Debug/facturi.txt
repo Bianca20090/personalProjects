@@ -1,0 +1,5 @@
+Istoric Facturi!
+1 ,Ana ,45 ,3
+2 ,Marian ,45 ,3
+10 ,Maria ,30 ,20
+5 ,Irina ,15 ,15
