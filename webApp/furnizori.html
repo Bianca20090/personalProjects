@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoAdvice</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #72726d;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f1f0f0e0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(90, 89, 89, 0.1);
+        }
+        .back-button {
+            text-align: right;
+            margin-bottom: 10px;
+        }
+        .back-button ion-icon {
+            font-size: 34px;
+            color: #333;
+            cursor: pointer;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            flex: 0 0 calc(50% - 10px);
+            box-sizing: border-box;
+        }
+        .card img {
+            display: block;
+            margin: 0 auto 10px;
+            max-width: 100%;
+            height: auto;
+        }
+        .card h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .card p {
+            text-align: justify;
+            font-size: 14px;
+            color: #555;
+        }
+        .card a {
+            display: block;
+            text-align: center;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        .chart-container {
+            margin-top: 20px;
+        }
+        .chart-container canvas {
+            width: 100%;
+            height: 400px;
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="back-button">
+            <a href="home.html">
+                <ion-icon name="close-circle-outline"></ion-icon>
+            </a>
+        </div>
+        <div class="content">
+            <div class="card">
+                <img src="./img/enter.png" alt="Enterprise" style="height: 100px; width: 140px;">
+                <h2>Enterprise Rent-A-Car</h2>
+                <p>
+                    Enterprise Rent-A-Car este o poveste de succes americană în curs de desfășurare. Principiile lor de bază și începuturile umile se învârt în jurul onestității și integrității personale. Acestia cred în întărirea comunităților, servind clienții ca și cum ar fi familia lor și recompensând munca grea. Aceste lucruri sunt la fel de importante astăzi cum au fost si când a fost înființata în 1957. Astăzi, rețeaua lor masivă înseamnă că Enterprise este cel mai mare furnizor de soluții de transport. Ofera închirieri auto și de camioane, precum și împărtășirea mașinilor și vânzarea de mașini. Enterprise e acolo când ai nevoie, cu peste 8.000 de locații în întreaga lume.
+                </p>
+                <a href="https://www.enterprise.com/en/home.html">Afla mai multe</a>
+            </div>
+            <div class="card">
+                <img src="./img/telcarlogo.png" alt="Telcar">
+                <h2>Telcar Rent-a-Car</h2>
+                <p>
+                    Telcar rent-a-car îți aduce soluții de închirieri auto flexibile și convenabile, indiferent de destinația ta. Cu centre deschise in Bucuresti si aeroportul Otopeni, acestia servicii de rent-a-car care îți fac călătoriile mai ușoare și mai confortabile. Fie că ai nevoie de o mașină pentru o întâlnire de afaceri, o escapadă în oraș sau o călătorie mai lungă, Telcar este partenerul tău de încredere pentru închirieri auto de calitate. Cu o flotă variată de mașini și servicii adaptate nevoilor tale, sunt alegerea ideală pentru a transforma fiecare călătorie într-o experiență plăcută.
+                </p>
+                <a href="https://telcar.ro/">Afla mai multe</a>
+            </div>
+        </div>
+        <div class="chart-container">
+            <canvas id="lineChart"></canvas>
+        </div>
+    </div>
+    <footer>
+        Contacteaza-ne pentru mai multe informatii: autoadvise@gmail.com
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/home.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getDatabase, ref, get } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyAsUUmj-UxOTh6phvTQQo9btmD48UdvJaI",
+            authDomain: "autoadvicedb.firebaseapp.com",
+            databaseURL: "https://autoadvicedb-default-rtdb.firebaseio.com",
+            projectId: "autoadvicedb",
+            storageBucket: "autoadvicedb.appspot.com",
+            messagingSenderId: "293295777219",
+            appId: "1:293295777219:web:4a9eee9af17bca84f24976"
+        };
+    
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const database = getDatabase(app);
+    
+        // Function to fetch data and initialize the line chart
+        async function initLineChart() {
+            const anunturiNumarRef = ref(database, 'nrAccesari');
+            const snapshot = await get(anunturiNumarRef);
+            if (snapshot.exists()) {
+                const data = snapshot.val();
+    
+                // Define the correct order of months
+                const monthOrder = ['ianuarie', 'februarie', 'martie', 'aprilie', 'mai', 'iunie', 'iulie', 'august', 'septembrie', 'octombrie', 'noiembrie', 'decembrie'];
+    
+                // Get the months from data and sort them according to the defined order
+                const months = Object.keys(data).sort((a, b) => monthOrder.indexOf(a) - monthOrder.indexOf(b));
+                const telcarData = [];
+                const enterpriseData = [];
+    
+                months.forEach(month => {
+                    telcarData.push(data[month]?.Telcar || 0);
+                    enterpriseData.push(data[month]?.Enterprise || 0);
+                });
+    
+                // Initialize Chart.js with the processed data
+                const ctx = document.getElementById('lineChart').getContext('2d');
+                new Chart(ctx, {
+                    type: 'line',
+                    data: {
+                        labels: months,
+                        datasets: [
+                            {
+                                label: 'Telcar',
+                                data: telcarData,
+                                borderColor: 'rgba(54, 162, 235, 1)', // Blue
+                                backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                                borderWidth: 2
+                            },
+                            {
+                                label: 'Enterprise',
+                                data: enterpriseData,
+                                borderColor: 'rgba(255, 99, 132, 1)', // Red
+                                backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                                borderWidth: 2
+                            }
+                        ]
+                    },
+                    options: {
+                        scales: {
+                            y: {
+                                beginAtZero: true
+                            }
+                        },
+                        plugins: {
+                            title: {
+                                display: true,
+                                text: 'Numar accesari prin intermediul platformei noastre'
+                            }
+                        }
+                    }
+                });
+            } else {
+                console.log("No data available");
+            }
+        }
+    
+        // Initialize the chart
+        initLineChart();
+    </script>
+    
+</body>
+</html>

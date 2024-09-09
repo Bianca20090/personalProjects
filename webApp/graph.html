@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grafic Evolutie Preturi Combustibil</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            margin: 0;
+            background-color: #f4f4f9;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .container {
+            display: flex;
+        }
+        .controls {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-right: 20px;
+        }
+        .controls .countries {
+            max-height: 200px;
+            overflow-y: auto;
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin-bottom: 10px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .controls .countries label {
+            display: flex;
+            align-items: center;
+            padding: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 5px;
+            transition: background-color 0.2s ease;
+        }
+        .controls .countries label:hover {
+            background-color: #f0f0f0;
+        }
+        .controls .countries input {
+            margin-right: 10px;
+        }
+        .controls select {
+            margin: 5px;
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background-color: #e0f7e9;
+            color: #000;
+            cursor: pointer;
+        }
+        .controls button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            background-color: #6c63ff;
+            color: #fff;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+        }
+        .controls button:hover {
+            background-color: #5a52e1;
+        }
+        canvas {
+            max-width: 80%;
+            max-height: 90%;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Grafic Evolutie Preturi Combustibil</h1>
+    <div class="container">
+        <div class="controls">
+            <div class="countries" id="countrySelect"></div>
+            <select id="fuelTypeSelect">
+                <option value="gasolinePrice">Benzina</option>
+                <option value="dieselPrice">Motorina</option>
+                <option value="atPrice">LPG</option>
+            </select>
+            <button id="backButton">Înapoi</button>
+        </div>
+        <canvas id="fuelPriceChart" style="height: 60%; width: 80%;"></canvas>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+
+        // Configurația Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyAsUUmj-UxOTh6phvTQQo9btmD48UdvJaI",
+            authDomain: "autoadvicedb.firebaseapp.com",
+            databaseURL: "https://autoadvicedb-default-rtdb.firebaseio.com",
+            projectId: "autoadvicedb",
+            storageBucket: "autoadvicedb.appspot.com",
+            messagingSenderId: "293295777219",
+            appId: "1:293295777219:web:4a9eee9af17bca84f24976"
+        };
+
+        // Inițializare Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        // Referință către nodul "preturiCombustibil"
+        const fuelPricesRef = ref(db, 'preturiCombustibil');
+
+        // Dicționar de culori pentru țări
+        const countryColors = {};
+
+        // Funcție pentru generarea unei culori aleatorii
+        function getRandomColor() {
+            return '#' + Math.floor(Math.random() * 16777215).toString(16);
+        }
+
+        // Inițializare grafic
+        const ctx = document.getElementById('fuelPriceChart').getContext('2d');
+        const fuelPriceChart = new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: [], // Datele vor fi setate dinamic
+                datasets: [] // Datele vor fi setate dinamic
+            },
+            options: {
+                responsive: true,
+                plugins: {
+                    legend: {
+                        position: 'top',
+                    }
+                },
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        min:1,
+                        title: {
+                            display: true,
+                            text: 'Pret'
+                        }
+                    },
+                    x: {
+                        title: {
+                            display: true,
+                            text: 'Data'
+                        }
+                    }
+                }
+            }
+        });
+
+        // Populăm dropdown-ul cu țările din baza de date
+        onValue(fuelPricesRef, (snapshot) => {
+            const fuelPrices = snapshot.val();
+            const countrySelect = document.getElementById('countrySelect');
+            const countries = new Set();
+
+            for (const date in fuelPrices) {
+                for (const country in fuelPrices[date]) {
+                    countries.add(country);
+                }
+            }
+
+            countries.forEach((country) => {
+                const label = document.createElement('label');
+                const checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                checkbox.value = country;
+                label.appendChild(checkbox);
+                label.appendChild(document.createTextNode(country));
+                countrySelect.appendChild(label);
+            });
+        });
+
+        // Funcție pentru a actualiza graficul
+        function updateChart(selectedCountries, selectedFuelType) {
+            onValue(fuelPricesRef, (snapshot) => {
+                const fuelPrices = snapshot.val();
+                const dates = Object.keys(fuelPrices).sort((a, b) => new Date(a) - new Date(b));
+
+                const datasets = selectedCountries.map((country) => {
+                    if (!countryColors[country]) {
+                        countryColors[country] = getRandomColor();
+                    }
+
+                    const data = dates.map((date) => {
+                        const prices = fuelPrices[date][country];
+                        return prices ? parseFloat(prices[selectedFuelType]) : NaN;
+                    });
+
+                    return {
+                        label: country,
+                        data: data,
+                        borderColor: countryColors[country],
+                        fill: false
+                    };
+                });
+
+                fuelPriceChart.data.labels = dates;
+                fuelPriceChart.data.datasets = datasets;
+                fuelPriceChart.update();
+            });
+        }
+
+        // Eveniment pentru schimbarea selecției în dropdown
+        document.getElementById('countrySelect').addEventListener('change', () => {
+            const selectedCountries = Array.from(document.querySelectorAll('#countrySelect input:checked')).map(checkbox => checkbox.value);
+            const selectedFuelType = document.getElementById('fuelTypeSelect').value;
+            updateChart(selectedCountries, selectedFuelType);
+        });
+
+        document.getElementById('fuelTypeSelect').addEventListener('change', () => {
+            const selectedCountries = Array.from(document.querySelectorAll('#countrySelect input:checked')).map(checkbox => checkbox.value);
+            const selectedFuelType = document.getElementById('fuelTypeSelect').value;
+            updateChart(selectedCountries, selectedFuelType);
+        });
+
+        // Eveniment pentru butonul de întoarcere
+        document.getElementById('backButton').addEventListener('click', () => {
+            window.location.href = 'tabelPreturi.html';
+        });
+    </script>
+</body>
+</html>

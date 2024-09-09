@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X_UA_Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AutoAdvice</title>
+
+    <!-- Link-uri către stilurile externe -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/css/glide.core.css">
+    <link rel="stylesheet" href="https://cdn.iconmonstr.com/1.3.0/css/iconmonstr-iconic-font.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<style>
+    body {
+        background: #868686;
+        font-family: Arial, sans-serif;
+        color: #000000;
+        margin: 0;
+        padding: 0;
+    }
+
+    .baraMenu {
+        background-color: #333333b5;
+            opacity: 0.9;
+            position: fixed;
+            width: 100%;
+            z-index: 100;
+            top: 0; /* Make sure it sticks to the top */
+    }
+
+    .buton-1 {
+        color: #E8E8E8;
+        border-color: #E8E8E8;
+        font-weight: bold;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 1px solid;
+        border-radius: 5px;
+        background: transparent;
+        cursor: pointer;
+    }
+
+    .buton-1:hover {
+        background: #E8E8E8;
+        color: #333;
+    }
+
+    .back-button ion-icon {
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .titlu p {
+        font-size: 30px;
+        margin: 0;
+        padding: 0;
+    }
+
+    .automobile-auto {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        margin-top: 90px; 
+        padding: 20px;
+    }
+
+    .automobile {
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        margin: 20px;
+        width: calc(33% - 40px);
+        max-width: 300px;
+        text-align: center;
+        transition: transform 0.3s;
+    }
+
+    .automobile:hover {
+        transform: translateY(-10px);
+    }
+
+    .overlay img {
+        width: 100%;
+        height: auto;
+    }
+
+    .prop-info {
+        padding: 15px;
+    }
+
+    .prop-info .denumireAuto {
+        font-size: 18px;
+        font-weight: bold;
+        color: #000000;
+    }
+
+    .specificatii {
+        list-style: none;
+        padding: 0;
+        margin: 10px 0;
+        color: #000000;
+    }
+
+    .specificatii li {
+        margin: 5px 0;
+    }
+
+    .prop-info a {
+        display: block;
+        margin: 10px 0;
+        color: #333;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .prop-info input[type="checkbox"] {
+        margin-right: 5px;
+    }
+
+    .buton-1_ {
+        display: block;
+        background: #3e3e3e;
+        color: #fff;
+        text-align: center;
+        padding: 10px;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .buton-1_:hover {
+        background: #555;
+    }
+
+
+    .blur-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 10;
+        }
+       /* Overlay to blur the background */
+.blur-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+
+
+.blur-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 99;
+        }
+        .iframe-container {
+            display: none;
+            position: fixed;
+            top: 10%;
+            left: 50%;
+            transform: translate(-50%, 0);
+            width: 40%;
+            height: 73%;
+            z-index: 100;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .close-button {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #333;
+            color: #fff;
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .f-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 600px;
+            box-sizing: border-box;
+        }
+
+
+/* Button styles */
+.buton-1 {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #333;
+    color: #E8E8E8;
+    text-decoration: none;
+    border: 1px solid #46444438;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.formular {
+            display: flex;
+            flex-direction: column;
+           
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 20px;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkbox-group label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            color: #555;
+            position: relative;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        .checkbox-group label:last-child {
+            border-bottom: none;
+        }
+        .checkbox-group span {
+            flex: 1;
+        }
+        .checkbox-group input {
+            position: absolute;
+            right: 5px;
+        }
+        input[type="submit"] {
+            background: #977cafb7;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background: #52465cb7;
+        }
+
+</style>
+<body>
+
+<section class="automobile-inchiriere">
+    <div class="baraMenu" style="background-color: #333333b5; opacity: 0.9; position: fixed; width: 100%; z-index: 100; ">
+        <div style="float: left;">
+            <a class="buton-1" href="#" onclick="afiseazaFormular()" style="opacity: 1; color:#E8E8E8 ; border-color:#E8E8E8 ;font-weight: bold;">Filtreaza anunturile</a>
+            
+            <button class="buton-1" id="buton-compara" style="opacity: 1; margin-left: 10px; color:#E8E8E8 ; border-color:#E8E8E8 ; font-weight: bold;">Compară</button>
+
+           <!---- <a class="buton-1"  style="opacity: 1; margin-left: 10px; color:#E8E8E8 ; border-color:#E8E8E8 ;">Compara</a>-->
+        </div>
+        <div class="back-button" style="float: right;">
+            <a href="home.html">
+                <ion-icon name="close-circle-outline" style="opacity: 1;"></ion-icon>
+            </a>
+        </div>
+        
+        <div class="titlu" >
+            <p style="font-size:30px; margin-top: 10px; "></p>
+            <p style="font-size: 30px; margin-bottom: 30px; margin-top: 20px; float: left; margin-left: 350px;" onclick="scrollToUP()">Lista Automobile</p>
+        </div>
+    </div>
+
+    <!-- Blocul pentru afișarea anunțurilor -->
+    <div class="automobile-auto" id="anunturi-container">
+        
+        <!-- Aici vor fi afișate anunțurile -->
+    </div>
+
+    <div id="blur-overlay" class="blur-overlay"></div>
+    
+    <div id="formular-container" class="iframe-container">
+        <button class="close-button" onclick="ascundeFormular()">X</button>
+        <div class="f-container">
+            <h1>Formular de filtrare</h1>
+            <form action="procesare.php" method="post" class="formular" id="formularRecomandare">
+                <div class="input-group">
+                    <label for="pasageri">Număr de Pasageri:</label>
+                    <input type="number" name="pasageri" id="pasageri" min="1" max="15">
+                </div>
+                <div class="input-group">
+                    <label>Activități planificate:</label>
+                    <div class="checkbox-group">
+                        <label><span>Excursii off-road</span> <input type="checkbox" name="activitati[]" value="off-road"></label>
+                        <label><span>Explorare urbană</span> <input type="checkbox" name="activitati[]" value="oras"></label>
+                        <label><span>Transport obiecte mari</span> <input type="checkbox" name="activitati[]" value="carat-obiecte"></label>
+                        <label><span>Job</span> <input type="checkbox" name="activitati[]" value="job"></label>
+                        <label><span>Călătorii cu familia</span> <input type="checkbox" name="activitati[]" value="familie"></label>
+                        <label><span>Camping</span> <input type="checkbox" name="activitati[]" value="camping"></label>
+                        <label><span>Altele</span> <input type="checkbox" name="activitati[]" value="altele"></label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <label for="tipCombustibil">Tipul de Combustibil:</label>
+                    <select name="tipCombustibil" id="tipCombustibil">
+                        <option value="" disabled selected>Selectează Tipul de Combustibil</option>
+                        <option value="benzina">Benzină</option>
+                        <option value="diesel">Motorină</option>
+                        <option value="electric">Electric</option>
+                        <option value="hybrid">Hybrid</option>
+                        <option value="indiferent">Indiferent</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="transmisie">Tipul de Transmisie:</label>
+                    <select name="transmisie" id="transmisie">
+                        <option value="" disabled selected>Selectează Tipul de transmisie</option>
+                        <option value="manuala">Manuală</option>
+                        <option value="automata">Automată</option>
+                        <option value="indiferent">Indiferent</option>
+                    </select>
+                </div>
+                <input type="submit" value="Filtrează" id="Recomandare">
+            </form>
+        </div>
+    </div>
+  
+</section>
+
+
+<!-- Script-uri externe -->
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<!-- Script-ul pentru interacțiunea cu baza de date Firebase -->
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getDatabase, ref, onValue, set, orderByChild, equalTo, get, child, query } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    import { getAuth, onAuthStateChanged, setPersistence, browserSessionPersistence } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+    // Configurația Firebase
+    const firebaseConfig = {
+        apiKey: "AIzaSyAsUUmj-UxOTh6phvTQQo9btmD48UdvJaI",
+        authDomain: "autoadvicedb.firebaseapp.com",
+        databaseURL: "https://autoadvicedb-default-rtdb.firebaseio.com",
+        projectId: "autoadvicedb",
+        storageBucket: "autoadvicedb.appspot.com",
+        messagingSenderId: "293295777219",
+        appId: "1:293295777219:web:4a9eee9af17bca84f24976"
+    };
+
+    // Inițializare Firebase
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    const anunturiRef = ref(db, 'anunturi');
+    const usersRef = ref(db, 'users'); // Adăugați o referință la "users"
+    const anunturiNumar=ref(db, 'nrAccesari');
+
+    // Obținerea obiectului de autentificare
+    const auth = getAuth();
+    // Setarea politicii de persistență
+setPersistence(auth, browserSessionPersistence)
+    .then(() => {
+        // Verificare dacă utilizatorul este autentificat la încărcarea paginii
+        onAuthStateChanged(getAuth(), (user) => {
+            if (user) {
+                // Utilizatorul este autentificat, acum puteți verifica și afișa butoanele corespunzătoare
+                const uid = user.uid;
+                const anunturiSalvatePath = `users/${uid}/anunturiSalvate`;
+
+                // Verificare dacă există anunțuri salvate pentru utilizator
+                onValue(ref(db, anunturiSalvatePath), (snapshot) => {
+                    const exists = snapshot.exists();
+                    if (exists) {
+                        // Anunțuri salvate existente, nu facem nimic
+                        console.log('Există anunțuri salvate pentru acest utilizator.');
+                    } else {
+                        // Nu există anunțuri salvate pentru acest utilizator
+                        console.log('Nu există anunțuri salvate pentru acest utilizator.');
+                    }
+                });
+            }
+        });
+        // Verificăm dacă utilizatorul este autentificat la încărcarea paginii
+onAuthStateChanged(getAuth(), (user) => {
+    if (user) {
+        // Utilizatorul este autentificat, acum puteți executa logica necesară
+        console.log('Utilizatorul este autentificat. UID:', user.uid);
+
+        // Obținem anunțurile salvate ale utilizatorului din nodul "usersFav"
+        const userFavPath = `usersFav/${user.uid}`;
+
+        // Verificăm dacă există anunțuri salvate pentru utilizator în nodul "usersFav"
+        onValue(ref(db, userFavPath), (snapshot) => {
+            if (snapshot.exists()) {
+                // Există anunțuri salvate pentru acest utilizator în "usersFav"
+                const anunturiSalvate = snapshot.val();
+
+                // Salvăm anunțurile salvate din "usersFav" înapoi în "anunturiSalvate" ale utilizatorului
+                set(ref(db, `users/${user.uid}/anunturiSalvate`), anunturiSalvate)
+                    .then(() => {
+                        console.log('Anunțurile salvate au fost adăugate înapoi în "anunturiSalvate" pentru utilizatorul cu UID:', user.uid);
+                    })
+                    .catch((error) => {
+                        console.error('Eroare la adăugarea anunțurilor salvate înapoi în "anunturiSalvate":', error);
+                    });
+            } else {
+                // Nu există anunțuri salvate pentru acest utilizator în "usersFav"
+                console.log('Nu există anunțuri salvate pentru acest utilizator în "usersFav".');
+            }
+        });
+    }
+});
+
+    })
+    .catch((error) => {
+        console.error('Eroare la setarea politicii de persistență:', error);
+    });
+    // Verificăm dacă utilizatorul este autentificat la încărcarea paginii
+onAuthStateChanged(getAuth(), (user) => {
+    if (user) {
+        // Utilizatorul este autentificat, acum puteți executa logica necesară
+        console.log('Utilizatorul este autentificat. UID:', user.uid);
+
+        // Obținem anunțurile salvate ale utilizatorului
+        const anunturiSalvatePath = `users/${user.uid}/anunturiSalvate`;
+
+        // Verificăm dacă există anunțuri salvate pentru utilizator
+        onValue(ref(db, anunturiSalvatePath), (snapshot) => {
+            if (snapshot.exists()) {
+                // Există anunțuri salvate pentru acest utilizator
+                // Salvăm lista de automobile salvate (anunturiSalvate) într-un nou nod în baza de date
+
+                // Obținem anunțurile salvate
+                const anunturiSalvate = snapshot.val();
+
+                // Salvăm lista de automobile salvate ale utilizatorului într-un nou nod "usersFav"
+                set(ref(db, `usersFav/${user.uid}`), anunturiSalvate)
+                    .then(() => {
+                        console.log('Lista de automobile salvate a fost adăugată în nodul "usersFav".');
+                    })
+                    .catch((error) => {
+                        console.error('Eroare la adăugarea listei de automobile salvate în nodul "usersFav":', error);
+                    });
+            } else {
+                // Nu există anunțuri salvate pentru acest utilizator
+                console.log('Nu există anunțuri salvate pentru acest utilizator.');
+            }
+        });
+    }
+});
+
+
+
+    // Setarea politicii de persistență
+    setPersistence(auth, browserSessionPersistence)
+        .then(() => {
+            // Funcția pentru afișarea anunțurilor
+            function displayAnunturi(snapshot) {
+                const anunturiContainer = document.getElementById('anunturi-container');
+                anunturiContainer.innerHTML = ''; // Curățarea conținutului anterior
+
+                snapshot.forEach((childSnapshot) => {
+                    const anunt = childSnapshot.val();
+                    const anuntId = childSnapshot.key; // Obținem ID-ul anunțului
+
+                    // Verificare dacă utilizatorul este autentificat și anunțul este salvat
+                    const user = auth.currentUser;
+
+                    // Verificarea stării autentificării la încărcarea paginii
+                    onAuthStateChanged(getAuth(), (user) => {
+                        if (user) {
+                            // Utilizatorul este autentificat, acum puteți verifica și afișa butoanele corespunzătoare
+                            snapshot.forEach((childSnapshot) => {
+                                const anunt = childSnapshot.val();
+                                const anuntId = childSnapshot.key;
+                                
+                                const uid = user.uid;
+                                const anunturiSalvatePath = `users/${uid}/anunturiSalvate/${anuntId}`;
+                                onValue(ref(db, anunturiSalvatePath), (snapshot) => {
+                                    const exists = snapshot.exists();
+                                    if (exists) {
+                                        const butonSalv = document.getElementById(`apreciereButton_${anuntId}`);
+                                        butonSalv.innerHTML = 'Sterge'; // Înlocuiește textul butonului cu "Sterge"
+                                        butonSalv.addEventListener('click', function(event) {
+                                            const auth = getAuth();
+                                            const user = auth.currentUser;
+                                            if (user) {
+                                                const uid = user.uid;
+                                                const anunturiSalvatePath = `users/${uid}/anunturiSalvate/${anuntId}`;
+                                                set(ref(db, anunturiSalvatePath), null)
+                                            }
+                                        });
+                                    }
+                                }, {
+                                    onlyOnce: true
+                                });
+                            });
+                        }
+                    });
+
+
+        const anuntHtml = `
+            <div class="automobile" id="anunt_${anuntId}">
+                <a class="buton-1_" id="apreciereButton_${anuntId}" style="opacity: 1;">Salveaza</a>
+                <div class="overlay">
+                    <img src="${anunt.imagine}" alt="Imagine auto">
+                </div>
+                <div class="prop-info">
+                    <span class="denumireAuto">${anunt.denumire}</span>
+                    <ul class="specificatii">
+                        <li class="tipViteze">${anunt.specs.cutieDeViteze}</li>
+                        <li class="nrPers">${anunt.specs.numarPersoane}</li>
+                        <li class="nrBag">${anunt.specs.nrBagaje}</li>
+                    </ul>
+                    <a href="${anunt.linkDetalii}" id="detaliiLink">Mai multe detalii</a>
+                    <input type="checkbox" id="comparatieCheckbox" value="familie">
+                    <label for="comparatieCheckbox">Selectează pentru comparatie</label>
+                </div>
+            </div>
+        `;
+        anunturiContainer.innerHTML += anuntHtml;
+
+        
+    });
+
+    // Restul codului pentru adăugarea evenimentelor etc.
+
+    anunturiContainer.addEventListener('click', function(event) {
+        if (event.target && event.target.id.startsWith('apreciereButton_')) {
+            const anuntId = event.target.id.split('_')[1];
+            console.log("Sunt aici pentru anunțul cu ID-ul:", anuntId);
+            const auth = getAuth();
+            const user = auth.currentUser;
+            console.log(user);
+
+            if (user) {
+                const uid = user.uid;
+                const anunturiSalvatePath = `users/${uid}/anunturiSalvate`;
+
+                console.log("abia acum Aici");
+                const butonSalv = document.getElementById(`apreciereButton_${anuntId}`);
+                if(butonSalv.innerHTML === 'Salveaza'){
+                set(ref(db, anunturiSalvatePath + '/' + anuntId), true)
+                    .then(() => {
+                        alert('Automobilul a fost salvat!');
+
+                        const butonSalv = document.getElementById(`apreciereButton_${anuntId}`);
+                    butonSalv.innerHTML = 'Sterge'; // Înlocuiește textul butonului cu "Sterge"
+                        
+                          })
+                    .catch(error => {
+                        console.error('Eroare la salvarea anunțului:', error);
+                    });
+                }
+                else if(butonSalv.innerHTML==='Sterge'){
+                    set(ref(db, anunturiSalvatePath + '/' + anuntId), null)
+                    .then(() => {
+                        alert('Automobilul a fost sters!');
+
+                        const butonSalv = document.getElementById(`apreciereButton_${anuntId}`);
+                    butonSalv.innerHTML = 'Salveaza'; // Înlocuiește textul butonului cu "Sterge"
+                        
+                          })
+                    .catch(error => {
+                        console.error('Eroare la salvarea anunțului:', error);
+                    });
+
+                }
+            } else {
+                console.log("Aici");
+                alert('Conectați-vă pentru a putea aprecia automobilul!');
+            }
+        }
+        
+    });
+
+  
+}
+
+
+
+// Afișarea anunțurilor la modificări în baza de date
+onValue(anunturiRef, (snapshot) => {
+    displayAnunturi(snapshot);
+});
+}).catch((error) => {
+            console.error('Eroare la setarea politicii de persistență:', error);
+});
+
+
+        
+ // Firebase configuration and initialization
+// Assuming firebase has already been configured and initialized as 'db'
+
+// Function to get the current month name since the start date
+function getMonthName() {
+    const currentDate = new Date();
+    const monthNames = ["ianuarie", "februarie", "martie", "aprilie", "mai", "iunie", "iulie", "august", "septembrie", "octombrie", "noiembrie", "decembrie"];
+    return monthNames[currentDate.getMonth()];
+}
+
+// Get the current month name
+const currentMonth = getMonthName();
+
+let nrMasiniEnterprise = 0;
+let nrMasiniTel = 0;
+
+// Listen for changes in the database for the current month "Telcar"
+onValue(ref(db, `nrAccesari/${currentMonth}/Telcar`), (snapshot) => {
+    if (snapshot.exists()) {
+        nrMasiniTel = snapshot.val();
+        console.log(`Număr accesări Telcar: ${nrMasiniTel}`);
+    }
+});
+
+// Listen for changes in the database for the current month "Enterprise"
+onValue(ref(db, `nrAccesari/${currentMonth}/Enterprise`), (snapshot) => {
+    if (snapshot.exists()) {
+        nrMasiniEnterprise = snapshot.val();
+        console.log(`Număr accesări Enterprise: ${nrMasiniEnterprise}`);
+    }
+});
+
+// Function to add the click event on the container with id "anunturi-container"
+document.getElementById('anunturi-container').addEventListener('click', async function(event) {
+    if (event.target && event.target.id === 'detaliiLink') {
+        const detaliiUrl = event.target.href;
+
+        if (detaliiUrl.includes('https://telcar.ro/')) {
+            nrMasiniTel++;
+            console.log(`Număr accesări Telcar: ${nrMasiniTel}`);
+            
+            // Update the value in Firebase for "Telcar" under the current month
+            await set(ref(db, `nrAccesari/${currentMonth}/Telcar`), nrMasiniTel);
+
+        } else if (detaliiUrl.includes('https://www.enterprise.com/')) {
+            nrMasiniEnterprise++;
+            console.log(`Număr accesări Enterprise: ${nrMasiniEnterprise}`);
+            
+            // Update the value in Firebase for "Enterprise" under the current month
+            await set(ref(db, `nrAccesari/${currentMonth}/Enterprise`), nrMasiniEnterprise);
+        }
+    }
+});
+
+
+// Obținem referința către butonul "Compara"
+const butonCompara = document.getElementById('buton-compara');
+
+// Adăugăm un eveniment de click pe butonul "Compara"
+butonCompara.addEventListener('click', async function(event) {
+    // Obținem toate checkbox-urile pentru selectarea automobilelor
+    const checkboxuri = document.querySelectorAll('input[type="checkbox"][id="comparatieCheckbox"]:checked');
+
+    // Verificăm dacă sunt selectate între 2 și 5 automobile
+    if (checkboxuri.length >= 2 && checkboxuri.length <= 5) {
+        // Declaram un array pentru a reține detaliile automobilelor selectate
+        const detaliiAutomobileSelectate = [];
+
+        // Iterăm prin fiecare checkbox selectat și obținem denumirea automobilului
+        for (const checkbox of checkboxuri) {
+            const denumireAutomobil = checkbox.parentElement.querySelector('.denumireAuto').textContent;
+
+            // Cautăm detaliile corespunzătoare în tabela anunturiDetalii
+            try {
+                const detaliiAutomobil = await cautaDetaliiAutomobil(denumireAutomobil);
+                detaliiAutomobileSelectate.push(detaliiAutomobil);
+            } catch (error) {
+                console.error(error);
+            }
+        }
+
+        // Acum putem utiliza array-ul detaliiAutomobileSelectate pentru a efectua alte operații
+        console.log('Detaliile automobilelor selectate:', detaliiAutomobileSelectate);
+        // Salvarea datelor în localStorage
+localStorage.setItem('detaliiAutomobile', JSON.stringify(detaliiAutomobileSelectate));
+
+        window.location.href = 'comparatie.html';
+
+    } else {
+        // Dacă nu sunt selectate între 2 și 5 automobile, afișăm un mesaj de eroare
+        alert('Vă rugăm să selectați între 2 și 5 automobile pentru a compara.');
+    }
+});
+
+
+function cautaDetaliiAutomobil(denumireAutomobil) {
+    return new Promise((resolve, reject) => {
+        const anunturiDetaliiRef = ref(db, 'anunturiDetalii');
+        onValue(anunturiDetaliiRef, (snapshot) => {
+            if (snapshot.exists()) {
+                const detaliiAutomobile = snapshot.val();
+                const detaliiAutomobil = Object.values(detaliiAutomobile).find((detalii) => detalii.denumire === denumireAutomobil);
+                if (detaliiAutomobil) {
+                    resolve(detaliiAutomobil);
+                } else {
+                    // Returnați doar denumirea automobilului în cazul în care nu există detalii
+                    resolve({ denumire: denumireAutomobil });
+                }
+            } else {
+                reject("Nu există detalii despre automobile în baza de date.");
+            }
+        });
+    });
+}
+
+
+
+
+document.getElementById('Recomandare').addEventListener('click', function(event) {
+    event.preventDefault();
+
+    var numarPasageri = document.getElementById('pasageri').value || 1; // Valoare implicită 1
+    var preferinteTransmisie = document.getElementById('transmisie').value || 'indiferent'; // Valoare implicită 'indiferent'
+    var activitatiSelectate = Array.from(document.querySelectorAll('input[name="activitati[]"]:checked')).map(checkbox => checkbox.value);
+    var combustibilSelectie = document.getElementById('tipCombustibil').value || 'indiferent'; // Valoare implicită 'indiferent'
+    afiseazaAnunturi(numarPasageri, preferinteTransmisie, activitatiSelectate, combustibilSelectie);
+});
+
+function filtreazaDupaNumarPasageri(anunturi, numarPasageri) {
+    return anunturi.filter(anunt => {
+        var numarPersoaneText = anunt.querySelector('.nrPers').textContent;
+        var numarPersoaneAnunt = parseInt(numarPersoaneText.match(/\d+/)[0]);
+        return numarPersoaneAnunt >= numarPasageri;
+    });
+}
+
+function filtreazaDupaTransmisie(anunturi, preferinteTransmisie) {
+    return anunturi.filter(anunt => {
+        var cutieDeVitezeAnunt = anunt.querySelector('.tipViteze').textContent.trim();
+        if (preferinteTransmisie === 'indiferent') return true;
+        if (preferinteTransmisie === 'manuala' && cutieDeVitezeAnunt.includes('Manuala', 'Automata, Manuala')) return true;
+        if (preferinteTransmisie === 'automata' && cutieDeVitezeAnunt.includes('Automatic', 'Automata, Manuala')) return true;
+        return false;
+    });
+}
+
+async function filtreazaDupaActivitati(anunturi, activitatiSelectate) {
+    const db = getDatabase();
+    const anunturiCombRef = ref(db, 'anunturiCombinat');
+    const snapshot = await get(anunturiCombRef);
+    const anunturiCombinate = snapshot.val();
+
+    return anunturi.filter(anunt => {
+        const anuntId = anunt.id.split('_')[1];
+        const activitatiAnunt = anunturiCombinate[anuntId]?.activitati || '';
+        return activitatiSelectate.every(act => activitatiAnunt.includes(act));
+    });
+}
+
+async function filtreazaDupaCombustibil(anunturi, combustibilSelectie) {
+    if (combustibilSelectie === 'indiferent') return anunturi;
+
+    const db = getDatabase();
+    const anunturiCombRef = ref(db, 'anunturiCombinat');
+    const snapshot = await get(anunturiCombRef);
+    const anunturiCombinate = snapshot.val();
+
+    return anunturi.filter(anunt => {
+        const anuntId = anunt.id.split('_')[1];
+        const combustibilAnunt = anunturiCombinate[anuntId]?.combustibil || '';
+
+        // Verificăm dacă tipul de combustibil selectat se găsește în lista de combustibili a anunțului
+        return combustibilAnunt.split(', ').some(combustibil => combustibil === combustibilSelectie);
+    });
+}
+
+
+async function afiseazaAnunturi(numarPasageri, preferinteTransmisie, activitatiSelectate, combustibilSelectie) {
+    const anunturi = Array.from(document.querySelectorAll('.automobile'));
+
+    let anunturiFiltrate = anunturi;
+
+    // Filtrare după numărul de pasageri
+    anunturiFiltrate = filtreazaDupaNumarPasageri(anunturiFiltrate, numarPasageri);
+
+    // Filtrare după transmisie
+    anunturiFiltrate = filtreazaDupaTransmisie(anunturiFiltrate, preferinteTransmisie);
+
+    // Filtrare după activități selectate
+    anunturiFiltrate = await filtreazaDupaActivitati(anunturiFiltrate, activitatiSelectate);
+
+    // Filtrare după combustibil selectat
+    anunturiFiltrate = await filtreazaDupaCombustibil(anunturiFiltrate, combustibilSelectie);
+
+    // Afișare anunțuri filtrate
+    anunturi.forEach(anunt => {
+        if (anunturiFiltrate.includes(anunt)) {
+            anunt.style.display = 'block';
+        } else {
+            anunt.style.display = 'none';
+        }
+    });
+}
+
+
+
+
+
+
+
+
+
+
+</script>
+<script src="js/slide.js"></script>
+<script src="js/home.js"></script>
+<script src="scrap.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-app.js"></script> 
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js"></script>
+<script src="https://www.gstatic.com/firebasejs/10.6.0/firebase-database.js"></script> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
+
