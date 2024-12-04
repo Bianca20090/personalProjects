@@ -161,7 +161,7 @@ return conditii;
     public static void main(String[] args) {
         JSONArray data = getLocationData("Tokyo");
         if (data != null) {
-            System.out.println(data.toString(2)); // Afiseaza datele intr-un format frumos
+            System.out.println(data.toString(2)); 
         }
     }
 }
