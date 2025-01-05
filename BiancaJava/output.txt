@@ -1,0 +1,8 @@
+ID client           Total zile inchiriere
+Client_005           32
+Client_006           20
+Client_004           13
+Client_008           9
+Client_001           8
+Client_007           7
+Client_002           6
