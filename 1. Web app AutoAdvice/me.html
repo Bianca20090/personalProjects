@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+    /* Stiluri CSS */
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 10px;
+        border: 2px solid #333; /* Margini colorate */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 20px;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .profile-pic img {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+    }
+
+    .user-info {
+        flex: 1;
+        margin-left: 20px;
+    }
+
+    .user-info h2 {
+        margin: 0 0 10px;
+    }
+
+    .user-info p {
+        margin: 5px 0;
+    }
+
+    .logout-btn, .close-btn {
+        padding: 10px 20px;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+
+    .nav-tabs {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 20px;
+    }
+
+    .nav-tabs a {
+        text-decoration: none;
+        color: #000;
+        font-weight: bold;
+        padding: 10px;
+        border-bottom: 3px solid transparent;
+    }
+
+    .nav-tabs a.active {
+        border-bottom: 3px solid #333;
+    }
+
+    .content {
+        margin-top: 20px;
+    }
+
+    .section {
+        display: none;
+    }
+
+    .section.active {
+        display: block;
+    }
+
+    .anunturi-container, .recomandari-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    .automobile {
+        background-color: #fff;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #ddd; /* Margini subtile */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        width: calc(50% - 20px); /* Două pe linie */
+    }
+
+    .overlay img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .prop-info {
+        margin-top: 10px;
+    }
+
+    .prop-info ul {
+        padding: 0;
+        list-style: none;
+    }
+
+    .buton-1_ {
+        display: block;
+        text-align: center;
+        margin: 10px 0;
+        padding: 10px;
+        background-color: #333;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            width: 95%;
+            margin: 20px auto;
+        }
+        .nav-tabs {
+            flex-direction: column;
+        }
+        .automobile {
+            width: 100%;
+        }
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="profile-pic">
+                <img src="img/user.png" alt="Profile Picture">
+            </div>
+            <div class="user-info">
+                <h2 id="userName"></h2>
+                <p id="userEmail">Email: N/A</p>
+                <p id="carCount"></p>
+            </div>
+            <button class="logout-btn" id="logOut">Deconectare</button>
+            <button class="close-btn" id="closeIcon">Închide</button>
+        </div>
+        <div class="nav-tabs">
+            <a href="#favorites" class="active" id="favoritesTab">Lista favorite</a>
+            <a href="#recommendations" id="recommendationsTab">Anunțuri recomandate</a>
+        </div>
+        <div class="content">
+            <div id="favorites" class="section active">
+                <h3>Lista favorite</h3>
+                <div id="anunturi-container" class="anunturi-container"></div>
+            </div>
+            <div id="recommendations" class="section">
+                <h3>Anunțuri recomandate</h3>
+                <div id="recomandari-container" class="recomandari-container"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+    import { getDatabase, ref, onValue, set, get, child, remove } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+    
+    const firebaseConfig = {
+        apiKey: "AIzaSyAsUUmj-UxOTh6phvTQQo9btmD48UdvJaI",
+        authDomain: "autoadvicedb.firebaseapp.com",
+        databaseURL: "https://autoadvicedb-default-rtdb.firebaseio.com",
+        projectId: "autoadvicedb",
+        storageBucket: "autoadvicedb.appspot.com",
+        messagingSenderId: "293295777219",
+        appId: "1:293295777219:web:4a9eee9af17bca84f24976"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const db = getDatabase(app);
+    const auth = getAuth();
+
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            const uid = user.uid;
+            const anunturiContainer = document.getElementById('anunturi-container');
+            const recomandariContainer = document.getElementById('recomandari-container');
+
+            const userRef = ref(db, `users/${uid}`);
+            get(userRef).then((snapshot) => {
+                if (snapshot.exists()) {
+                    const userData = snapshot.val();
+                    document.getElementById('userEmail').textContent = `Email: ${userData.email || 'N/A'}`;
+                }
+            }).catch(error => {
+                console.error('Eroare la obținerea datelor utilizatorului:', error);
+            });
+
+            const userFavRef = ref(db, `usersFav/${uid}`);
+            
+            onValue(userFavRef, (snapshot) => {
+                anunturiContainer.innerHTML = '';
+                let carCount = 0;
+                const promises = [];
+                const anunturiSalvate = new Set();
+
+                snapshot.forEach((childSnapshot) => {
+                    const anuntId = childSnapshot.key;
+                    carCount++;
+                    anunturiSalvate.add(anuntId);
+                    const promise = get(child(ref(db), `anunturi/${anuntId}`)).then((snapshot) => {
+                        if (snapshot.exists()) {
+                            const anunt = snapshot.val();
+                            const anuntHtml = `
+                                <div class="automobile" id="anunt_${anuntId}">
+                                    <a class="buton-1_" id="apreciereButton_${anuntId}" style="opacity: 1;">Sterge</a>
+                                    <div class="overlay">
+                                        <img src="${anunt.imagine}" alt="Imagine auto">
+                                    </div>
+                                    <div class="prop-info">
+                                        <span class="denumireAuto">${anunt.denumire}</span>
+                                        <ul class="specificatii">
+                                            <li class="tipViteze">${anunt.specs.cutieDeViteze}</li>
+                                            <li class="nrPers">${anunt.specs.numarPersoane}</li>
+                                            <li class="nrBag">${anunt.specs.nrBagaje}</li>
+                                        </ul>
+                                        <a href="${anunt.linkDetalii}" id="detaliiLink">Mai multe detalii</a>
+                                    </div>
+                                </div>
+                            `;
+                            anunturiContainer.innerHTML += anuntHtml;
+                        }
+                    }).catch(error => {
+                        console.error('Eroare la obținerea detaliilor anunțului:', error);
+                    });
+                    promises.push(promise);
+                });
+
+                Promise.all(promises).then(() => {
+                    document.getElementById('carCount').textContent = `Număr total de mașini salvate: ${carCount}`;
+
+                    const anunturiCombinatRef = ref(db, 'anunturiCombinat');
+                    get(anunturiCombinatRef).then((snapshot) => {
+                        if (snapshot.exists()) {
+                            const anunturiCombinat = snapshot.val();
+                            const activitatiMap = {};
+                            const anunturiSimilareSet = new Set();
+
+                            anunturiSalvate.forEach(anuntId => {
+                                if (anunturiCombinat[anuntId]) {
+                                    const activitati = anunturiCombinat[anuntId].activitati;
+                                    activitatiMap[anuntId] = activitati;
+                                }
+                            });
+
+                            for (const [savedAnuntId, savedActivitati] of Object.entries(activitatiMap)) {
+                                for (const [anuntId, anunt] of Object.entries(anunturiCombinat)) {
+                                    if (anuntId !== savedAnuntId && anunt.activitati === savedActivitati && !anunturiSalvate.has(anuntId)) {
+                                        anunturiSimilareSet.add(anuntId);
+                                    }
+                                }
+                            }
+
+                            const anunturiAfisate = new Set([...anunturiSalvate]);
+
+                            const recomandariPromises = Array.from(anunturiSimilareSet).filter(anuntId => !anunturiAfisate.has(anuntId)).map(anuntId => {
+                                anunturiAfisate.add(anuntId);
+                                return get(child(ref(db), `anunturi/${anuntId}`)).then((snapshot) => {
+                                    if (snapshot.exists()) {
+                                        const anunt = snapshot.val();
+                                        const anuntHtml = `
+                                            <div class="automobile" id="recomandat_${anuntId}">
+                                                <div class="overlay">
+                                                    <img src="${anunt.imagine}" alt="Imagine auto">
+                                                </div>
+                                                <div class="prop-info">
+                                                    <span class="denumireAuto">${anunt.denumire}</span>
+                                                    <ul class="specificatii">
+                                                        <li class="tipViteze">${anunt.specs.cutieDeViteze}</li>
+                                                        <li class="nrPers">${anunt.specs.numarPersoane}</li>
+                                                        <li class="nrBag">${anunt.specs.nrBagaje}</li>
+                                                    </ul>
+                                                    <a href="${anunt.linkDetalii}" id="detaliiLink">Mai multe detalii</a>
+                                                </div>
+                                            </div>
+                                        `;
+                                        recomandariContainer.innerHTML += anuntHtml;
+                                    }
+                                }).catch(error => {
+                                    console.error('Eroare la obținerea detaliilor anunțului:', error);
+                                });
+                            });
+
+                            return Promise.all(recomandariPromises);
+                        }
+                    }).catch(error => {
+                        console.error('Eroare la obținerea anunțurilor combinate:', error);
+                    });
+                }).catch(error => {
+                    console.error('Eroare la procesarea promisiunilor anunțurilor:', error);
+                });
+            });
+
+            anunturiContainer.addEventListener('click', (event) => {
+                if (event.target && event.target.id.startsWith('apreciereButton_')) {
+                    const anuntId = event.target.id.split('_')[1];
+                    
+                    const userFavAnuntRef = child(userFavRef, anuntId);
+                    const userAnuntSalvatRef = ref(db, `users/${uid}/anunturiSalvate/${anuntId}`);
+
+                    Promise.all([
+                        remove(userFavAnuntRef),
+                        remove(userAnuntSalvatRef)
+                    ]).then(() => {
+                        console.log(`Anunțul cu ID ${anuntId} a fost șters din favorite și din anunțurile salvate ale utilizatorului.`);
+                    }).catch(error => {
+                        console.error('Eroare la ștergerea anunțului din favorite și din anunțurile salvate:', error);
+                    });
+                    
+                }
+            });
+
+            document.getElementById('logOut').addEventListener('click', () => {
+                signOut(auth).then(() => {
+                    window.location.href = 'logIn.html';
+                }).catch(error => {
+                    console.error('Eroare la deconectare:', error);
+                });
+            });
+
+            document.getElementById('closeIcon').addEventListener('click', () => {
+                window.location.href = 'home.html';
+            });
+
+            const favoritesTab = document.getElementById('favoritesTab');
+            const recommendationsTab = document.getElementById('recommendationsTab');
+            const favoritesSection = document.getElementById('favorites');
+            const recommendationsSection = document.getElementById('recommendations');
+
+            favoritesTab.addEventListener('click', () => {
+                favoritesTab.classList.add('active');
+                recommendationsTab.classList.remove('active');
+                favoritesSection.classList.add('active');
+                recommendationsSection.classList.remove('active');
+            });
+
+            recommendationsTab.addEventListener('click', () => {
+                recommendationsTab.classList.add('active');
+                favoritesTab.classList.remove('active');
+                recommendationsSection.classList.add('active');
+                favoritesSection.classList.remove('active');
+            });
+        } else {
+            window.location.href = 'logIn.html';
+        }
+    });
+</script>
+</html>

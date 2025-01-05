@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .calculator-container {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .column {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .textbox {
+            margin-bottom: 20px;
+            width: 75%;
+            padding: 10px;
+            font-size: 14px;
+            border:1px solid rgb(167, 148, 165);
+        }
+
+        .buttonCalcul {
+            display: block;
+            padding: 15px;
+            background-color: #333333;
+            color: aliceblue;
+            text-align: center;
+            border-radius: 10px;
+            margin-top: 60px;
+            width: 100%;
+        }
+
+        .result-container {
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .rectangle {
+            width: 60%;
+            margin: 20px auto;
+            border:1px solid rgb(167, 148, 165);
+            padding: 10px;
+        }
+
+        .horizontal-line {
+            width: 80%;
+            margin: 20px auto;
+            border-top: 1px solid black;
+        }
+
+        .vertical-line {
+            border-left: 1px solid rgb(167, 148, 165);
+            height: 100%;
+            margin: 0 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Calculator cost combustibil</h1>
+    <div class="calculator-container">
+        <div class="column">
+            <h2>Țara în care călătorești</h2>
+            <select id="country" class="textbox">
+                <!-- Țările vor fi adăugate aici dinamic -->
+            </select>
+
+            <h2>Marca mașinii</h2>
+            <select id="brand" class="textbox">
+                <!-- Opțiuni pentru marcă -->
+            </select>
+        </div>
+
+        <div class="column">
+            <h2>Modelul mașinii</h2>
+            <select id="model" class="textbox">
+                <!-- Opțiuni pentru model -->
+            </select>
+
+            <h2>Tipul motorului</h2>
+            <select id="engine" class="textbox">
+                <!-- Opțiuni pentru tipul motorului -->
+            </select>
+        </div>
+
+        <div class="column">
+            <h2>Numărul de km parcurși</h2>
+            <input type="number" id="numberKm" class="textbox" placeholder="Numarul de km">
+            <button id="buttonCalcul" class="buttonCalcul">Calculează</button>
+        </div>
+    </div>
+
+    <div class="result-container">
+        <div class="rectangle">
+            <h2>Costul estimativ de:</h2>
+            <p id="cost" style="color: rgb(2, 51, 164); font-size: 25px; font-weight: bold;">€</p>
+            <div class="horizontal-line"></div>
+
+            <div class="costs">
+                <div >Costul pentru zona urbana:</div>
+                <div id="orass"></div>
+                <div class="vertical-line"></div>
+                <div>Costul pentru autostrada:</div>
+                <div id="autoStrada"></div>
+            </div>
+        </div>
+    </div>
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+    
+        // Configurația Firebase
+        const firebaseConfig = {
+            apiKey: "AIzaSyAsUUmj-UxOTh6phvTQQo9btmD48UdvJaI",
+            authDomain: "autoadvicedb.firebaseapp.com",
+            databaseURL: "https://autoadvicedb-default-rtdb.firebaseio.com",
+            projectId: "autoadvicedb",
+            storageBucket: "autoadvicedb.appspot.com",
+            messagingSenderId: "293295777219",
+            appId: "1:293295777219:web:4a9eee9af17bca84f24976"
+        };
+    
+        // Inițializare Firebase
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+        const fuelPricesRef = ref(db, 'preturiCombustibil');
+        const consumTab = ref(db, 'consumCarburant');
+    
+        let closestDateData = null;
+    
+        // Funcție pentru a găsi data cea mai apropiată de data curentă
+        function getClosestDate(data) {
+            const currentDate = new Date();
+            let closestDate = null;
+            let closestDiff = Infinity;
+    
+            for (const date in data) {
+                const dataDate = new Date(date);
+                const diff = Math.abs(currentDate - dataDate);
+    
+                if (diff < closestDiff) {
+                    closestDate = date;
+                    closestDiff = diff;
+                }
+            }
+    
+            return closestDate;
+        }
+    
+        // Încărcați datele pentru comboboxul cu țările disponibile
+        onValue(fuelPricesRef, (snapshot) => {
+            const data = snapshot.val();
+            const closestDate = getClosestDate(data);
+            closestDateData = data[closestDate];
+    
+            const countrySelect = document.getElementById('country');
+            countrySelect.innerHTML = ''; // Goliți selectul înainte de a adăuga noi opțiuni
+    
+            for (const country in closestDateData) {
+                const option = document.createElement('option');
+                option.value = country;
+                option.textContent = country;
+                countrySelect.appendChild(option);
+            }
+        });
+    
+        // Funcție de calcul
+        function calculate() {
+    const selectedCountry = document.getElementById('country').value;
+    const selectedBrand = document.getElementById('brand').value;
+    const selectedModel = document.getElementById('model').value;
+    const selectedEngine = document.getElementById('engine').value;
+    const numberOfKm = parseFloat(document.getElementById('numberKm').value);
+    
+
+    if (!numberOfKm || isNaN(numberOfKm)) {
+        console.log('Introduceți un număr valid de kilometri.');
+        return;
+    }
+
+    const resultContainer = document.querySelector('.result-container');
+    const costElement = document.getElementById('cost');
+    const urbanCostElement = document.getElementById('orass');
+    const highwayCostElement = document.getElementById('autoStrada');
+ 
+
+    if (closestDateData && closestDateData[selectedCountry]) {
+        const countryData = closestDateData[selectedCountry];
+        
+
+        loadDataFromRef(consumTab)
+            .then(data => {
+                if (data[selectedBrand] && data[selectedBrand][selectedModel] && data[selectedBrand][selectedModel][selectedEngine]) {
+                    const engineData = data[selectedBrand][selectedModel][selectedEngine];
+                    const fuelType = engineData.fuelType;
+                    const highwayConsumption = parseFloat(engineData.highwayConsumption) / 100;
+                    const mixedConsumption = parseFloat(engineData.mixedConsumption) / 100;
+                    const urbanConsumption = parseFloat(engineData.urbanConsumption) / 100;
+
+                    let mixedPrice = 0;
+                    let urbanPrice = 0;
+                    let highwayPrice = 0;
+
+                    if (fuelType === 'Benzină') {
+                        const gasolinePrice = parseFloat(countryData.gasolinePrice);
+                        highwayPrice = highwayConsumption ? (highwayConsumption * numberOfKm * gasolinePrice).toFixed(2) : 0;
+                        mixedPrice = mixedConsumption ? (mixedConsumption * numberOfKm * gasolinePrice).toFixed(2) : 0;
+                        urbanPrice = urbanConsumption ? (urbanConsumption * numberOfKm * gasolinePrice).toFixed(2) : 0;
+                    } else if (fuelType === 'Diesel') {
+                        const dieselPrice = parseFloat(countryData.dieselPrice);
+                        highwayPrice = highwayConsumption ? (highwayConsumption * numberOfKm * dieselPrice).toFixed(2) : 0;
+                        mixedPrice = mixedConsumption ? (mixedConsumption * numberOfKm * dieselPrice).toFixed(2) : 0;
+                        urbanPrice = urbanConsumption ? (urbanConsumption * numberOfKm * dieselPrice).toFixed(2) : 0;
+                        console.log(dieselPrice)
+                    }
+
+                    costElement.textContent = `${mixedPrice} €`;
+        urbanCostElement.textContent = `${urbanPrice} €`;
+        highwayCostElement.textContent = `${highwayPrice} €`;
+                } else {
+                    console.log(`Nu s-au găsit date pentru motorul selectat.`);
+                }
+            })
+            .catch(error => console.error(error));
+    } else {
+        console.log('Nu s-au găsit date pentru țara selectată.');
+    }
+}
+
+
+
+    
+        // Funcție care returnează o promisiune pentru a încărca datele din referința specificată
+        function loadDataFromRef(reference) {
+            return new Promise((resolve, reject) => {
+                onValue(reference, (snapshot) => {
+                    const data = snapshot.val();
+                    if (data) {
+                        resolve(data); // Datele au fost încărcate cu succes
+                    } else {
+                        reject("Nu s-au găsit date."); // Nu s-au găsit date în referință
+                    }
+                });
+            });
+        }
+    
+        // Încărcați datele pentru comboboxul cu mărci de mașini disponibile
+        function loadBrands() {
+            const brandSelect = document.getElementById('brand');
+            brandSelect.innerHTML = ''; // Goliți selectul înainte de a adăuga noi opțiuni
+    
+            loadDataFromRef(consumTab)
+                .then(data => {
+                    for (const marca in data) {
+                        const option = document.createElement('option');
+                        option.value = marca;
+                        option.textContent = marca;
+                        brandSelect.appendChild(option);
+                    }
+                })
+                .catch(error => console.error(error));
+        }
+    
+        // Încărcați datele pentru comboboxul cu modele specifice mărcii selectate
+        function loadModels() {
+            const selectedBrand = document.getElementById('brand').value;
+            const modelSelect = document.getElementById('model');
+            modelSelect.innerHTML = ''; // Goliți selectul înainte de a adăuga noi opțiuni
+    
+            loadDataFromRef(consumTab)
+                .then(data => {
+                    if (selectedBrand && selectedBrand !== ' ') {
+                        const models = Object.keys(data[selectedBrand]); // Accesăm direct mărcile de mașini din obiectul 'data'
+                        for (const model of models) {
+                            const option = document.createElement('option');
+                            option.value = model;
+                            option.textContent = model;
+                            modelSelect.appendChild(option);
+                        }
+                    }
+                })
+                .catch(error => console.error(error));
+        }
+    
+        // Funcție pentru a afișa opțiunile pentru motoare specifice modelului selectat
+        function loadEngines() {
+            const selectedBrand = document.getElementById('brand').value;
+            const selectedModel = document.getElementById('model').value;
+            const engineSelect = document.getElementById('engine');
+            engineSelect.innerHTML = ''; // Goliți selectul înainte de a adăuga noi opțiuni
+    
+            loadDataFromRef(consumTab)
+                .then(data => {
+                    if (selectedModel && selectedModel !== ' ') {
+                        const engines = Object.keys(data[selectedBrand][selectedModel]); // Accesăm direct motoarele din obiectul 'data'
+                        for (const engine of engines) {
+                            const option = document.createElement('option');
+                            option.value = engine;
+                            option.textContent = engine;
+                            engineSelect.appendChild(option);
+                        }
+                    }
+                })
+                .catch(error => console.error(error));
+        }
+    
+        // Atașează evenimentul change la comboboxul cu marcă pentru a încărca modelele specifice
+        document.getElementById('brand').addEventListener('change', loadModels);
+    
+        // Atașează evenimentul change la comboboxul cu model pentru a încărca motoarele specifice
+        document.getElementById('model').addEventListener('change', loadEngines);
+
+// Atașează evenimentul click la butonul de calcul
+document.getElementById('buttonCalcul').addEventListener('click', calculate);
+
+// Apelează funcția loadBrands() când întregul DOM este complet încărcat
+document.addEventListener('DOMContentLoaded', function() {
+    loadBrands();
+});
+</script>
+
+    
+
+   
+</body>
+</html>
