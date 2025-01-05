@@ -1,9 +1,0 @@
-﻿  BuseBiancaIonela_1050C.cpp
-C:\Users\bianc\source\repos\BuseBiancaIonela_1050C\BuseBiancaIonela_1050C.cpp(488,11): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
-C:\Users\bianc\source\repos\BuseBiancaIonela_1050C\BuseBiancaIonela_1050C.cpp(498,7): warning C4101: 'days': unreferenced local variable
-C:\Users\bianc\source\repos\BuseBiancaIonela_1050C\BuseBiancaIonela_1050C.cpp(986,1): warning C4326: return type of 'main' should be 'int' instead of 'void'
-C:\Users\bianc\source\repos\BuseBiancaIonela_1050C\BuseBiancaIonela_1050C.cpp(1247,37): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
-C:\Users\bianc\source\repos\BuseBiancaIonela_1050C\BuseBiancaIonela_1050C.cpp(303): warning C4715: 'Masina::operator=': not all control paths return a value
-C:\Users\bianc\source\repos\BuseBiancaIonela_1050C\BuseBiancaIonela_1050C.cpp(899): warning C4715: 'ParcAuto::operator[]': not all control paths return a value
-C:\Users\bianc\source\repos\BuseBiancaIonela_1050C\BuseBiancaIonela_1050C.cpp(394): warning C4715: 'Masina::InchiriereMasina': not all control paths return a value
-  BuseBiancaIonela_1050C.vcxproj -> C:\Users\bianc\source\repos\BuseBiancaIonela_1050C\Debug\BuseBiancaIonela_1050C.exe
