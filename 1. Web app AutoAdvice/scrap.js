@@ -26,7 +26,7 @@ async function scrapeEnterpriseData(url) {
 
   $('.vehicle-class-card').each((i, vehicle) => {
     let denumire = $(vehicle).find('.vehicle-class-card__description').text().trim();
-    // Eliminăm "or similar" din denumire folosind replace
+    
     denumire = denumire.replace(/or similar/g, '').trim();
     const linkDetaliiPath = $(vehicle).find('.vehicle-class-card__title-link').attr('href'); // Obține doar calea către linkul detalii
     const linkDetalii = 'https://www.enterprise.com/' + linkDetaliiPath; // Concatenează URL-ul de bază cu calea către linkul detalii manual
@@ -58,13 +58,13 @@ async function scrapeAllData() {
 
     const admin = require('firebase-admin');
 
-    // Calea către fișierul JSON cu cheile de autentificare descărcat din Consola Firebase
-    const serviceAccount = require("./autoadvicedb-firebase-adminsdk-i2p0c-fa0929f43b.json");
 
-    // Inițializare Firebase Admin SDK
+    const serviceAccount = require(".***-i2p0c-fa0929f43b.json");
+
+
     admin.initializeApp({
       credential: admin.credential.cert(serviceAccount),
-      databaseURL: "https://autoadvicedb-default-rtdb.firebaseio.com" // URL-ul bazei de date
+      databaseURL: "https://***.firebaseio.com" 
     });
 
     const db = admin.database();
@@ -111,3 +111,4 @@ async function scrapeAllData() {
 }
 
 scrapeAllData();
+
