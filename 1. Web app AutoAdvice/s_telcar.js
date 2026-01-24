@@ -4,13 +4,13 @@ const cheerio = require('cheerio');
 const { v4: uuidv4 } = require('uuid');
 const admin = require('firebase-admin');
 
-// Calea către fișierul JSON cu cheile de autentificare descărcat din Consola Firebase
-const serviceAccount = require("./autoadvicedb-firebase-adminsdk-i2p0c-fa0929f43b.json");
 
-// Inițializare Firebase Admin SDK
+const serviceAccount = require("./***-firebase-adminsdk-i2p0c-fa0929f43b.json");
+
+
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://autoadvicedb-default-rtdb.firebaseio.com" // URL-ul bazei de date
+  databaseURL: "https://***.firebaseio.com" 
 });
 
 const db = admin.database();
@@ -91,11 +91,12 @@ async function scrapeAllData() {
         await scrapeHertzData(url);
     }
 
-    // Scriem datele în fișierul JSON după ce s-au terminat toate operațiile de scrap
+  
     fs.writeFile('data.json', JSON.stringify({ anunturi: dataLinks }, null, 2), (err) => {
         if (err) throw err;
         console.log('Datele au fost preluate și adăugate în fișierul JSON cu succes!');
     });
 }
+
 
 scrapeAllData();
