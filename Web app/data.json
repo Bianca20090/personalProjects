@@ -1,0 +1,484 @@
+{
+  "anunturi": {
+    "224caab3-fd45-4b6d-b2e7-2f0a5796c44d": {
+      "denumire": "Citroen C4 Cactus",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-citroen-c4-cactus/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x2 x2"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/10/inchirieri-auto-citroen-c4-cactus-exterior.png"
+    },
+    "c407a215-92df-4018-8f8f-fefc4db81fc6": {
+      "denumire": "Citroen Grand Picasso (5/7 locuri)",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-citroen-grand-picasso-7-locuri/",
+      "specs": {
+        "transmisie": "Automata, Manuala",
+        "nrLocuri": "5 locuri, 7 locuri",
+        "nrBagaje": "x3 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/10/inchirieri-auto-citroen-c4-grand-picasso-exterior.png"
+    },
+    "e5de0313-a04b-4efd-8afd-d96811cb4daf": {
+      "denumire": "Dacia Duster",
+      "linkDetalii": "https://telcar.ro/dacia-duster/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x3 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2012/11/inchirieri-auto-dacia-duster-exterior.png"
+    },
+    "95efaa45-f393-4943-893b-e498787d5112": {
+      "denumire": "Dacia Lodgy (5/7 locuri)",
+      "linkDetalii": "https://telcar.ro/dacia-lodgy-7-locuri/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri, 7 locuri",
+        "nrBagaje": "x3 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2012/11/inchirieri-auto-dacia-lodgy-exterior.jpg"
+    },
+    "080230c4-45b0-499a-93f5-b39aaedda14e": {
+      "denumire": "Dacia Logan",
+      "linkDetalii": "https://telcar.ro/dacia-logan/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x2 x2"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2012/11/inchirieri-auto-dacia-logan-I-exterior.jpg"
+    },
+    "266c5cbc-97ae-40f7-b32a-120f58b0050c": {
+      "denumire": "Dacia Logan II",
+      "linkDetalii": "https://telcar.ro/dacia-logan-2/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x2 x2"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/01/inchirieri-auto-dacia-logan-2-exterior.png"
+    },
+    "1bae30c5-f55f-43ad-9822-d0635dc6d880": {
+      "denumire": "Dacia Logan MCV II",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-dacia-logan-mcv-2/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x2 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/01/inchirieri-auto-dacia-logan-mcv-2-exterior.png"
+    },
+    "434a7ab9-5ad6-48eb-8b4f-9a13663e3a94": {
+      "denumire": "Dacia Sandero Stepway",
+      "linkDetalii": "https://telcar.ro/dacia-sandero-stepway/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x1 x2"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/01/inchirieri-auto-dacia-sandero-stepway-2-exterior.png"
+    },
+    "ed6fd6ca-6918-41f5-9c79-fddfd54fa27d": {
+      "denumire": "Fiat Panda",
+      "linkDetalii": "https://telcar.ro/fiat-panda/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "4 locuri",
+        "nrBagaje": "x1 x1"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/01/inchirieri-auto-fiat-panda-exterior-1.png"
+    },
+    "e5e6817a-7df2-433e-b710-5fab258e3e30": {
+      "denumire": "Fiat Panda Cross (4×4)",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-fiat-panda-4x4/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "4 locuri",
+        "nrBagaje": "x1 x1"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/01/inchirieri-auto-fiat-panda-4x4-exterior.jpg"
+    },
+    "75d1a2ef-ec70-4018-8fa8-214ad3efd4e2": {
+      "denumire": "Fiat Scudo (6/9 locuri)",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-fiat-scudo-9-locuri/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "6 locuri, 9 locuri",
+        "nrBagaje": "x4 x5"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/01/inchirieri-auto-fiat-scudo-9-locuri-exterior.png"
+    },
+    "e2c7334d-14c7-4908-a63d-4d6c059c6187": {
+      "denumire": "Fiat Tipo",
+      "linkDetalii": "https://telcar.ro/fiat-tipo/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x2 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/01/inchirieri-auto-fiat-tipo.png"
+    },
+    "dc8b286e-e5f9-4dc0-ba28-681041acd697": {
+      "denumire": "Ford Fiesta",
+      "linkDetalii": "https://telcar.ro/ford-fiesta/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x1 x2"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/02/inchirieri-auto-ford-fiesta-exterior.jpg"
+    },
+    "0cb036b0-1fa0-4095-8b27-30d4e96d3487": {
+      "denumire": "FORD Focus",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-ford-focus/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x2 x2"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/02/inchirieri-auto-ford-focus-exterior.png"
+    },
+    "6e137ed2-2bf7-4e1a-93f2-9f7975e43e2a": {
+      "denumire": "FORD Galaxy (7 locuri)",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-ford-galaxy-7-locuri/",
+      "specs": {
+        "transmisie": "Automata, Manuala",
+        "nrLocuri": "7 locuri",
+        "nrBagaje": "x3 x4"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2021/07/inchirieri-auto-ford-galaxy-7-locuri-exterior.jpg"
+    },
+    "a7789abd-378d-43c0-84d0-4bc94e6675e8": {
+      "denumire": "Ford Mondeo",
+      "linkDetalii": "https://telcar.ro/ford-mondeo/",
+      "specs": {
+        "transmisie": "Automata, Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x3 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/02/inchirieri-auto-ford-mondeo-exterior.png"
+    },
+    "b740269f-ff00-4ae8-823a-99b0164d887d": {
+      "denumire": "FORD Tourneo Custom (6/9 locuri)",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-ford-tourneo-custom-6-9-locuri/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "6 locuri, 9 locuri",
+        "nrBagaje": "x4 x5"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/06/inchirieri-auto-ford-tourneo-custom-9-locuri-exterior.jpg"
+    },
+    "fe39838c-c459-404f-91bf-d538feb37acf": {
+      "denumire": "Hyundai i20",
+      "linkDetalii": "https://telcar.ro/hyundai-i20-model-nou/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x1 x2"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/02/inchirieri-auto-hyundai-i20-exterior.png"
+    },
+    "54b47dc1-f440-46ce-be54-ba614f7e037b": {
+      "denumire": "MERCEDES BENZ clasa V (6/9 locuri)",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-mercedes-benz-clasa-v/",
+      "specs": {
+        "transmisie": "Automata, Manuala",
+        "nrLocuri": "6 locuri, 9 locuri",
+        "nrBagaje": "x4 x5"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2024/05/rent-a-car-mercedes-benz-v-class-9-seats.png"
+    },
+    "f925e084-e8d9-4e90-8f3d-b036385a78f2": {
+      "denumire": "MERCEDES BENZ Vito (6/9 locuri)",
+      "linkDetalii": "https://telcar.ro/mercedes-benz-vito/",
+      "specs": {
+        "transmisie": "Automata, Manuala",
+        "nrLocuri": "6 locuri, 9 locuri",
+        "nrBagaje": "x4 x5"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2023/11/inchirieri-auto-mercedes-benz-vito-9-locuri-exterior.jpg"
+    },
+    "b519e1fc-8d0f-4069-bc74-fdbfc917bed6": {
+      "denumire": "OPEL Astra",
+      "linkDetalii": "https://telcar.ro/opel-astra/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x2 x2"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2021/06/inchirieri-auto-opel-astra-k-exterior.jpg"
+    },
+    "834906d5-6200-477c-911a-af1278823332": {
+      "denumire": "OPEL Astra SW",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-opel-astra-sw/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x3 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/04/inchirieri-auto-opel-astra-j-sports-tourer-exterior.png"
+    },
+    "d8392fb0-95bb-4089-ac1d-2cee967a4738": {
+      "denumire": "OPEL Corsa",
+      "linkDetalii": "https://telcar.ro/opel-corsa/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x1 x2"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/04/inchirieri-auto-opel-corsa-d-exterior.jpg"
+    },
+    "76997aa1-c0c6-49b4-b832-5c6d01ad7b42": {
+      "denumire": "OPEL Insignia",
+      "linkDetalii": "https://telcar.ro/opel-insignia/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x3 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/04/inchirieri-auto-opel-insignia-exterior.png"
+    },
+    "eba9234a-4d47-482d-a337-3451a58526ec": {
+      "denumire": "OPEL Vivaro (6/9 locuri)",
+      "linkDetalii": "https://telcar.ro/opel-vivaro/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "6 locuri, 9 locuri",
+        "nrBagaje": "x4 x5"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2023/11/inchirieri-auto-opel-vivaro-9-locuri-exterior.png"
+    },
+    "0cf1411d-2003-46e1-b036-e360d9df93ae": {
+      "denumire": "OPEL Vivaro Combi (6/9 locuri)",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-opel-vivaro-combi-9-locuri/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "6 locuri, 9 locuri",
+        "nrBagaje": "x4 x5"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2023/11/inchirieri-auto-opel-vivaro-combi-9-locuri-exterior.png"
+    },
+    "f023ad17-fc3f-4a20-a49f-b2e5c205c0fa": {
+      "denumire": "OPEL Zafira (5/7 locuri)",
+      "linkDetalii": "https://telcar.ro/opel-zafira-7-locuri/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri, 7 locuri",
+        "nrBagaje": "x3 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/05/inchirieri-auto-opel-zafira-B-exterior.jpeg"
+    },
+    "3495902e-3d40-4f22-9d3d-2d39c50ff814": {
+      "denumire": "OPEL Zafira Tourer (5/7 locuri)",
+      "linkDetalii": "https://telcar.ro/opel-zafira-c-7-locuri/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri, 7 locuri",
+        "nrBagaje": "x3 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/05/inchirieri-auto-opel-zafira-7-locuri-exterior.png"
+    },
+    "083512fb-55f2-454a-872e-7caf2a7d62d4": {
+      "denumire": "Peugeot Expert (6/9 locuri)",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-peugeot-expert-9-locuri/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "6 locuri, 9 locuri",
+        "nrBagaje": "x4 x5"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/01/inchirieri-auto-peugeot-expert-9-locuri-exterior.png"
+    },
+    "7316c1c3-fc7d-44ee-b749-e90041595b3b": {
+      "denumire": "Renault Captur",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-renault-captur/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x2 x2"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/01/inchirieri-auto-renault-captur-exterior.png"
+    },
+    "7e7ca05e-2b61-4d2c-9f42-ebc4ec230525": {
+      "denumire": "Renault Fluence",
+      "linkDetalii": "https://telcar.ro/renault-fluence/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x2 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/05/inchirieri-auto-renault-fluence-exterior.jpg"
+    },
+    "3443c983-185a-45bd-8f52-8558568bb577": {
+      "denumire": "Renault Grand Scenic (5/7 locuri)",
+      "linkDetalii": "https://telcar.ro/renault-grand-scenic-7-locuri/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri, 7 locuri",
+        "nrBagaje": "x3 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/05/inchirieri-auto-renault-grand-scenic-7-locuri-exterior.jpg"
+    },
+    "e2cdd66a-e9e1-4b01-9263-1186ede37dc9": {
+      "denumire": "Renault Megane",
+      "linkDetalii": "https://telcar.ro/renault-megane/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x2 x2"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/05/inchirieri-auto-renault-megane-exterior.png"
+    },
+    "c063d6fc-5a5c-4fec-858a-9819fab95091": {
+      "denumire": "Renault Megane SW",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-renault-megane-sw/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x3 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/01/inchirieri-auto-renault-megane-sw-exterior.jpg"
+    },
+    "a328e5c2-9303-4f18-b2af-728359eded51": {
+      "denumire": "Renault Trafic (6/9 locuri)",
+      "linkDetalii": "https://telcar.ro/renault-trafic-9-locuri/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "6 locuri, 9 locuri",
+        "nrBagaje": "x4 x5"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/05/inchirieri-auto-renault-trafic-9-locuri-exterior.jpg"
+    },
+    "7171009a-3516-4063-895b-32306f220a32": {
+      "denumire": "Skoda Citigo",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-skoda-citigo/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "4 locuri",
+        "nrBagaje": "x1 x1"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/05/inchirieri-auto-skoda-citigo-exterior.png"
+    },
+    "6b9bfe1b-7481-4df2-85d2-8508aecc396c": {
+      "denumire": "Skoda Fabia",
+      "linkDetalii": "https://telcar.ro/skoda-fabia/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x1 x2"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/05/inchirieri-auto-skoda-fabia-exterior.png"
+    },
+    "02ef584c-679d-451b-9a77-aac5c25acefe": {
+      "denumire": "Skoda Octavia",
+      "linkDetalii": "https://telcar.ro/skoda-octavia/",
+      "specs": {
+        "transmisie": "Automata, Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x3 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/05/inchirieri-auto-skoda-octavia-3-exterior.jpg"
+    },
+    "4ca1fde6-d0df-4e1e-9392-c6868c1f3bc9": {
+      "denumire": "Skoda Rapid",
+      "linkDetalii": "https://telcar.ro/skoda-rapid/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x2 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/05/inchirieri-auto-skoda-rapid-exterior.png"
+    },
+    "c86e6768-bd3b-4b51-883b-3dd796e760cb": {
+      "denumire": "VOLKSWAGEN Caravelle (6/9 locuri)",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-volkswagen-caravelle-9-locuri/",
+      "specs": {
+        "transmisie": "Automata, Manuala",
+        "nrLocuri": "6 locuri, 9 locuri",
+        "nrBagaje": "x4 x5"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/08/inchirieri-auto-volkswagen-caravelle-9-locuri-exterior.png"
+    },
+    "ea7d180b-2259-4418-b3c5-2099e9d4e825": {
+      "denumire": "Volkswagen Golf 7",
+      "linkDetalii": "https://telcar.ro/volkswagen-golf/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x2 x2"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/05/inchirieri-auto-volkswagen-golf-7-exterior.jpg"
+    },
+    "5e154873-e3e3-4666-a8d3-855b076b03ac": {
+      "denumire": "Volkswagen Jetta",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-volkswagen-jetta/",
+      "specs": {
+        "transmisie": "Automata, Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x3 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/01/inchirieri-auto-volkswagen-jetta-exterior.jpg"
+    },
+    "764c22e4-268f-46c0-bfa1-d2fd2ccae2a8": {
+      "denumire": "Volkswagen Passat",
+      "linkDetalii": "https://telcar.ro/volkswagen-passat/",
+      "specs": {
+        "transmisie": "Automata, Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x3 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/06/inchirieri-auto-volkswagen-passat-exterior.png"
+    },
+    "a6d87612-aec8-4690-9231-56981be7d421": {
+      "denumire": "Volkswagen Polo",
+      "linkDetalii": "https://telcar.ro/volkswagen-polo/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "5 locuri",
+        "nrBagaje": "x2 x2"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/01/inchirieri-auto-volkswagen-polo-exterior.png"
+    },
+    "f64bc070-b4a6-486a-b630-7775f3918e31": {
+      "denumire": "VOLKSWAGEN Sharan (7 locuri)",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-volkswagen-sharan-7-locuri/",
+      "specs": {
+        "transmisie": "Automata, Manuala",
+        "nrLocuri": "7 locuri",
+        "nrBagaje": "x3 x4"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2021/07/inchirieri-auto-volkswagen-sharan-7-locuri-exterior.jpg"
+    },
+    "ef18a816-8d09-4ff8-963e-a919c2cc90d9": {
+      "denumire": "Volkswagen Touran (5/7 locuri)",
+      "linkDetalii": "https://telcar.ro/volkswagen-touran-7-locuri/",
+      "specs": {
+        "transmisie": "Automata, Manuala",
+        "nrLocuri": "5 locuri, 7 locuri",
+        "nrBagaje": "x3 x3"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/06/inchirieri-auto-volkswagen-touran-7-locuri-exterior.png"
+    },
+    "3d968932-6457-45c6-b17f-c3fe24e9db62": {
+      "denumire": "VOLKSWAGEN Transporter (6/9 locuri)",
+      "linkDetalii": "https://telcar.ro/volkswagen-transporter/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "6 locuri, 9 locuri",
+        "nrBagaje": "x4 x5"
+      },
+      "imagine": "https://telcar.ro/wp-content/uploads/2019/08/inchirieri-auto-volkswagen-transporter-t6-9-locuri-exterior.jpg"
+    },
+    "82d4fbb5-ad7a-4d60-9b33-51987e9066c5": {
+      "denumire": "Volkswagen Up",
+      "linkDetalii": "https://telcar.ro/inchirieri-auto-volkswagen-up/",
+      "specs": {
+        "transmisie": "Manuala",
+        "nrLocuri": "4 locuri",
+        "nrBagaje": "x1 x1"
+      },
+      "imagine": "https://i.imgur.com/dV4CM6v.png"
+    }
+  }
+}

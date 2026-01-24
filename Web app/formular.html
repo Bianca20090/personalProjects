@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formular de Recomandare Auto</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 800px;
+            box-sizing: border-box;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 20px;
+        }
+        .formular {
+            display: flex;
+            flex-direction: column;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+        .input-group label {
+            display: block;
+            margin-bottom: 5px;
+            color: #555;
+        }
+        .input-group input,
+        .input-group select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .checkbox-group {
+            display: flex;
+            flex-direction: column;
+        }
+        .checkbox-group label {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            color: #555;
+            position: relative;
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 5px;
+        }
+        .checkbox-group label:last-child {
+            border-bottom: none;
+        }
+        .checkbox-group span {
+            flex: 1;
+        }
+        .checkbox-group input {
+            position: absolute;
+            right: 5px;
+        }
+        input[type="submit"] {
+            background: #977cafb7;
+            color: #fff;
+            border: none;
+            padding: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background: #52465cb7;
+        }
+    </style>
+</head>
+<body class="formularSection">
+    <div class="container">
+        <h1>Formular de Recomandare Auto</h1>
+        <form action="procesare.php" method="post" class="formular" id="formularRecomandare">
+            <div class="input-group">
+                <label for="pasageri">Număr de Pasageri:</label>
+                <input type="number" name="pasageri" id="pasageri" min="1" max="8">
+            </div>
+            <div class="input-group">
+                <label>Activități planificate:</label>
+                <div class="checkbox-group">
+                    <label><span>Excursii off-road</span> <input type="checkbox" name="activitati[]" value="off-road"></label>
+                    <label><span>Călătorii pe drumuri montane</span> <input type="checkbox" name="activitati[]" value="drumuri-montane"></label>
+                    <label><span>Explorare urbană</span> <input type="checkbox" name="activitati[]" value="oras"></label>
+                    <label><span>Transport obiecte mari</span> <input type="checkbox" name="activitati[]" value="carat-obiecte"></label>
+                    <label><span>Job</span> <input type="checkbox" name="activitati[]" value="job"></label>
+                    <label><span>Călătorii cu familia</span> <input type="checkbox" name="activitati[]" value="familie"></label>
+                    <label><span>Camping</span> <input type="checkbox" name="activitati[]" value="camping"></label>
+                    <label><span>Conducerea în condiții de iarnă</span> <input type="checkbox" name="activitati[]" value="iarna"></label>
+                    <label><span>Altele</span> <input type="checkbox" name="activitati[]" value="altele"></label>
+                </div>
+            </div>
+            <div class="input-group">
+                <label for="transmisie">Tipul de Transmisie:</label>
+                <select name="transmisie" id="transmisie">
+                    <option value="" disabled selected>Selectează Tipul de transmisie</option>
+                    <option value="manuala">Manuală</option>
+                    <option value="automata">Automată</option>
+                    <option value="indiferent">Indiferent</option>
+                </select>
+            </div>
+            <div class="input-group">
+                <label for="tipCombustibil">Tipul de Combustibil:</label>
+                <select name="tipCombustibil" id="tipCombustibil">
+                    <option value="" disabled selected>Selectează Tipul de Combustibil</option>
+                    <option value="benzina">Benzină</option>
+                    <option value="motorina">Motorină</option>
+                    <option value="electric">Electric</option>
+                    <option value="hibrid">Hibrid</option>
+                </select>
+            </div>
+            <input type="submit" value="Recomandare" id="Recomandare">
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.6.0/glide.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="js/slide.js"></script>
+    <script src="js/home.js"></script>
+
+    <script>
+        const butonRec = document.getElementById('Recomandare');
+        butonRec.addEventListener('click', async function(event) {
+            event.preventDefault(); // Previne trimiterea formularului
+
+            // Extrage valorile introduse de utilizator
+            var numarPasageri = document.getElementById('pasageri').value;
+            var transmisie = document.getElementById('transmisie').value;
+            var tipCombustibil = document.getElementById('tipCombustibil').value;
+            var activitati = Array.from(document.querySelectorAll('input[name="activitati[]"]:checked')).map(cb => cb.value);
+
+            const optiuni = [];
+            // Seteaza valori implicite daca nu sunt completate anumite campuri
+            if (!numarPasageri) {
+                numarPasageri = 1;
+            }
+
+            if (!transmisie) {
+                transmisie = 'indiferent';
+            }
+
+            if (!tipCombustibil) {
+                tipCombustibil = 'indiferent';
+            }
+            
+            console.log(numarPasageri);
+            console.log(transmisie)
+            console.log(tipCombustibil);
+
+            optiuni.push(numarPasageri);
+            optiuni.push(transmisie);
+            optiuni.push(tipCombustibil);
+            optiuni.push(activitati);
+            // Salveaza valorile in localStorage
+            localStorage.setItem('optiuniFormular', JSON.stringify(optiuni));
+
+            // Încarcă datele din localStorage și afișează-le în cadrul mic
+            afiseazaRezultate();
+        });
+
+        function afiseazaRezultate() {
+            const container = document.createElement('div');
+            const optiuni = JSON.parse(localStorage.getItem('optiuniFormular'));
+            container.innerHTML = `
+                <h2>Rezultatele Formularului:</h2>
+                <p>Număr de Pasageri: ${optiuni[0]}</p>
+                <p>Tipul de Transmisie: ${optiuni[1]}</p>
+                <p>Tipul de Combustibil: ${optiuni[2]}</p>
+                <p>Activități planificate: ${optiuni[3].join(', ')}</p>
+            `;
+            document.querySelector('.container').appendChild(container);
+        }
+    </script>
+</body>
+</html>

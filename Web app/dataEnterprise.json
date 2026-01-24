@@ -1,0 +1,654 @@
+{
+  "anunturi": {
+    "39ebd2c3-1324-4f30-995f-89f44e64b7f3": {
+      "denumire": "Mitsubishi Mirage",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/economy.html",
+      "specs": [
+        "Automatic",
+        "4 People",
+        "2 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/ECAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714589682126.png"
+    },
+    "1d286799-52da-4ae3-bd0e-1ee2899792ea": {
+      "denumire": "Vehicle determined upon pick-up (Compact or Larger)",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/click-pick.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "2 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/XXAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1587645528243.png"
+    },
+    "ab47eef6-7b4a-429c-9929-11b307579419": {
+      "denumire": "Nissan Versa",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/compact.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "2 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/CCAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714590227456.png"
+    },
+    "d03fb3b3-d26a-49e6-8bf2-701cc89f23d3": {
+      "denumire": "Toyota Corolla",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/intermediate.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/ICAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1620230914227.png"
+    },
+    "2bec3fe6-2e50-4e3d-b108-260b4a765981": {
+      "denumire": "Volkswagen Jetta",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/standard.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/SCAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1544210775124.png"
+    },
+    "c3e90106-c9eb-4d2c-b5f4-38bf789971d5": {
+      "denumire": "Chevy Malibu",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/full-size.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/FCAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1701701384161.png"
+    },
+    "7da57606-4fce-466f-b644-056370ffe3a5": {
+      "denumire": "Ford Mustang Convertible",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/convertible.html",
+      "specs": [
+        "Automatic",
+        "4 People",
+        "2 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/STAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1543605919377.png"
+    },
+    "58edab39-deee-4241-9ff2-d222ba859228": {
+      "denumire": "Dodge Challenger",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/sporty.html",
+      "specs": [
+        "Automatic",
+        "4 People",
+        "2 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/SSAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1574880314547.png"
+    },
+    "8eb45e05-0c75-4889-983f-5a4648f94389": {
+      "denumire": "Audi A5 Sportback",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/full-size-elite.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/GXAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1700067178662.png"
+    },
+    "53ffe7b3-a5d6-44d9-b895-99311df386c2": {
+      "denumire": "BMW 228i Gran Coupe",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/standard-elite.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "2 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/RXAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1713792994024.png"
+    },
+    "6eaf0fac-a461-43d4-979d-9bbfbdbbfec9": {
+      "denumire": "Audi A3 or BMW 2 Series Gran Coupe",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/premium-special.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/PXAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714590721727.png"
+    },
+    "8fd3f6ac-736f-41ea-ab1a-2ab3ceb0a15e": {
+      "denumire": "BMW 5-Series, Mercedes Benz E-Class",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/premium-elite.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/UXAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1654786524705.png"
+    },
+    "5f2abc00-8e06-4ef9-84ac-7e2a439f7ed3": {
+      "denumire": "Nissan Maxima",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/premium.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/PCAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714579212293.png"
+    },
+    "5dd6d23c-2e69-4a1b-b312-b2af3e7d604b": {
+      "denumire": "Audi A4 or BMW 3 Series",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/luxury.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/LCAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714578868267.png"
+    },
+    "fab66d39-051e-45e2-8bdc-22ec35bb8520": {
+      "denumire": "BMW 7-Series, Audi A8",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/convertible-elite.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/WCAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1704470646357.png"
+    },
+    "86f83ced-0a10-4ea4-b481-b053df4ba823": {
+      "denumire": "Porsche 911, Jaguar F-Type SVR, Mercedes Benz SL400/550",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/large-executive-luxury.html",
+      "specs": [
+        "Automatic",
+        "4 People",
+        "2 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/WXAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1654786641257.png"
+    },
+    "b37e3d6b-3870-41e3-a939-ae478739d5c6": {
+      "denumire": "Toyota Prius",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/standard-hybrid.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/SCAH.doi.352.high.imageSmallThreeQuarterNodePath.png/1543605920546.png"
+    },
+    "9ff34c22-9dac-4c1b-b0b1-56d1abc16b5f": {
+      "denumire": "Ford Fusion Hybrid",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/full-size-hybrid.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/FCAH.doi.352.high.imageSmallThreeQuarterNodePath.png/1492780375254.png"
+    },
+    "94378658-174a-4bf7-8d10-00f140665463": {
+      "denumire": "Nissan LEAF",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/intermediate-electric.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "2 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/ICAE.doi.352.high.imageSmallThreeQuarterNodePath.png/1544210775276.png"
+    },
+    "aaf46b4a-5b43-4e83-a5a1-8c26b64c51a0": {
+      "denumire": "Tesla Model S, Porsche Taycan",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/cars/luxury-elite-electric.html",
+      "specs": [
+        "Automatic",
+        "4 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/WCAE.doi.352.high.imageSmallThreeQuarterNodePath.png/1654786525931.png"
+    },
+    "9af94715-25b5-4cdb-89d4-68edcb1ffc17": {
+      "denumire": "Nissan Kicks",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/suvs/compact-suv.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/CFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714589199730.png"
+    },
+    "5a2180a6-34b6-4372-b718-516522c98e02": {
+      "denumire": "Nissan Rogue",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/suvs/intermediate.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/IFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1618262879727.png"
+    },
+    "c32bbbb4-064f-409a-8c74-0ef1b40da0a5": {
+      "denumire": "Ford Edge",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/suvs/standard.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "5 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/SFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714584218003.png"
+    },
+    "41e6e9fa-02b5-47bb-afd0-ca59b10d616b": {
+      "denumire": "Chevrolet Tahoe",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/suvs/full-size.html",
+      "specs": [
+        "Automatic",
+        "7 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/FFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1618262877780.png"
+    },
+    "0c4f813c-4e12-47f5-9570-db8e4988e213": {
+      "denumire": "Infiniti QX80",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/suvs/luxury.html",
+      "specs": [
+        "Automatic",
+        "7 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/LFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1706907788439.png"
+    },
+    "89ab52c1-3f9b-488a-8a30-0856df6804b7": {
+      "denumire": "Audi Q3, Cadillac XT4",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/suvs/standard-elite.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/RFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714584066765.png"
+    },
+    "0bb88fb8-267b-49e2-8cae-7c0438aa33e4": {
+      "denumire": "Volkswagen Atlas",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/suvs/crossover-premium.html",
+      "specs": [
+        "Automatic",
+        "7 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/PGAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1706556373364.png"
+    },
+    "b2b85dfc-e618-4e88-9b7a-18db440847c5": {
+      "denumire": "Range Rover Sport, BMW X7, Maserati Levante",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/suvs/luxury-elite-suv.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/WFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1654786870245.png"
+    },
+    "42b58d0b-1a58-4b9b-a34b-b9f2d032bb49": {
+      "denumire": "Chevy Suburban",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/suvs/premium.html",
+      "specs": [
+        "Automatic",
+        "8 People",
+        "7 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/PFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1618262876980.png"
+    },
+    "a5fb49be-a93e-4569-9bf8-a28f911518b9": {
+      "denumire": "BMW X3",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/suvs/premium-elite-suv.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/UFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1544210749802.png"
+    },
+    "9b402c28-6906-4f6f-9f6e-654dd37f7bb9": {
+      "denumire": "Jeep Wrangler",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/suvs/jeep-wrangler-2-door.html",
+      "specs": [
+        "Automatic",
+        "4 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/IJAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714578638013.png"
+    },
+    "527e20e8-5b59-42c7-ac04-e2b39ab761d7": {
+      "denumire": "Jeep Wrangler Unlimited",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/suvs/jeep-wrangler-4-door.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "5 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/FJAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714589982949.png"
+    },
+    "95c9c950-03e2-4ed5-975e-9dd6809394de": {
+      "denumire": "Chevrolet Colorado",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/trucks/pickup.html",
+      "specs": [
+        "Automatic",
+        "4 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/TRUCKS/SPAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1618263047434.png"
+    },
+    "aaf1467f-2529-42bc-9bad-1e07ca644755": {
+      "denumire": "Ford F150",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/trucks/large-pickup.html",
+      "specs": [
+        "Automatic",
+        "4 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/TRUCKS/PPAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1512427309887.png"
+    },
+    "70b74214-b8ea-47a5-930b-df19c0dd793f": {
+      "denumire": "Chrysler Pacifica",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/vans/7-passenger-minivan.html",
+      "specs": [
+        "Automatic",
+        "7 People",
+        "5 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/VANS/MVAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1618263096675.png"
+    },
+    "62d4116e-921d-4fa5-8cc2-16692b817823": {
+      "denumire": "Toyota Sienna",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/vans/8-passenger-minivan.html",
+      "specs": [
+        "Automatic",
+        "8 People",
+        "5 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/VANS/SVAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1547668804155.png"
+    },
+    "40f9bd50-282a-4101-afb2-14e153be6392": {
+      "denumire": "Ford Transit Wagon",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/vans/15-passenger-van.html",
+      "specs": [
+        "Automatic",
+        "15 People",
+        "2 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/VANS/FVAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714590124481.png"
+    },
+    "2c615d9a-1c74-4081-8d70-a09920712191": {
+      "denumire": "Ford Transit Wagon",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/vans/12-passenger-van.html",
+      "specs": [
+        "Automatic",
+        "12 People",
+        "7 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/VANS/RVAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1492744320042.png"
+    },
+    "1336f99d-a776-4312-9970-2d4e67de0f19": {
+      "denumire": "Nissan NV200",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/vans/compact-cargo-van.html",
+      "specs": [
+        "Automatic",
+        "2 People",
+        "0 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/VANS/JKAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1517591717238.png"
+    },
+    "cf46877c-692d-49c9-a68f-69fbc23f5eb1": {
+      "denumire": "Chevrolet Express Cargo",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/vans/cargo-van.html",
+      "specs": [
+        "Automatic",
+        "2 People",
+        "0 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/VANS/SKAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1492744297142.png"
+    },
+    "11cb4155-4792-49b8-ba87-9c76f1f25f77": {
+      "denumire": "Audi A5 Sportback",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/luxury-cars/full-size-elite.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/GXAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1700067178662.png"
+    },
+    "363441a1-9778-4100-9c5f-518c57bd3e04": {
+      "denumire": "BMW 228i Gran Coupe",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/luxury-cars/standard-elite1.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "2 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/RXAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1713792994024.png"
+    },
+    "de73ce84-7a0c-4966-8ffa-0b2f31f2ebb6": {
+      "denumire": "Audi A3 or BMW 2 Series Gran Coupe",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/luxury-cars/premium-special.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/PXAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714590721727.png"
+    },
+    "bf18a4a6-dd8d-46bd-a499-8e3ba154ba1e": {
+      "denumire": "BMW 5-Series, Mercedes Benz E-Class",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/luxury-cars/premium-elite.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/UXAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1654786524705.png"
+    },
+    "544a0c07-3f6b-4830-91cc-95ed857c0bed": {
+      "denumire": "Nissan Maxima",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/luxury-cars/premium.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/PCAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714579212293.png"
+    },
+    "c23b10aa-5cfa-4741-b68a-f20590cc2ffc": {
+      "denumire": "Audi A4 or BMW 3 Series",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/luxury-cars/sedan.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/LCAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714578868267.png"
+    },
+    "5d0dffe4-d7b5-4ca5-b38c-c744430258b2": {
+      "denumire": "BMW 7-Series, Audi A8",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/luxury-cars/convertible-elite.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/WCAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1704470646357.png"
+    },
+    "7ac52346-7ce1-4a03-a4c4-d01efe914acf": {
+      "denumire": "Porsche 911, Jaguar F-Type SVR, Mercedes Benz SL400/550",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/luxury-cars/large-executive-luxury.html",
+      "specs": [
+        "Automatic",
+        "4 People",
+        "2 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/WXAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1654786641257.png"
+    },
+    "1c0d16b2-dd0b-476c-a689-77331798c84c": {
+      "denumire": "Tesla Model S, Porsche Taycan",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/luxury-cars/luxury-elite-electric.html",
+      "specs": [
+        "Automatic",
+        "4 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/CARS/WCAE.doi.352.high.imageSmallThreeQuarterNodePath.png/1654786525931.png"
+    },
+    "8728c3e9-5be3-45a2-b038-df3f352e24a7": {
+      "denumire": "Infiniti QX80",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/luxury-cars/luxury.html",
+      "specs": [
+        "Automatic",
+        "7 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/LFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1706907788439.png"
+    },
+    "e457f418-ee9c-491d-bfd4-13e4d85b30db": {
+      "denumire": "Audi Q3, Cadillac XT4",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/luxury-cars/standard-elite.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/RFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714584066765.png"
+    },
+    "22637641-1cb8-4ff9-a117-cd82a78d02c3": {
+      "denumire": "Volkswagen Atlas",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/luxury-cars/crossover-premium.html",
+      "specs": [
+        "Automatic",
+        "7 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/PGAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1706556373364.png"
+    },
+    "2aa3176a-52b9-47c1-b446-19a42c956d1d": {
+      "denumire": "Range Rover Sport, BMW X7, Maserati Levante",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/luxury-cars/luxury-elite-suv.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/WFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1654786870245.png"
+    },
+    "4b0503e3-8c3f-4363-a25e-2236aed3a4ec": {
+      "denumire": "Chevy Suburban",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/luxury-cars/premium1.html",
+      "specs": [
+        "Automatic",
+        "8 People",
+        "7 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/PFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1618262876980.png"
+    },
+    "8686a8e4-2f48-4fdb-a233-3b71ccfdf4e4": {
+      "denumire": "BMW X3",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/luxury-cars/premium-elite-suv.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/UFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1544210749802.png"
+    },
+    "06d7859b-fc91-40f9-b36e-10a41c19f79c": {
+      "denumire": "Nissan Kicks",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/awd-4x4/compact-suv.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/CFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714589199730.png"
+    },
+    "c4eb5cfd-d765-4fa3-b70e-79e20c44c580": {
+      "denumire": "Ford Edge",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/awd-4x4/standard.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "5 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/SFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714584218003.png"
+    },
+    "e95c6411-0ccb-40d2-bb7b-6b7755e22e88": {
+      "denumire": "Chevrolet Tahoe",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/awd-4x4/full-size.html",
+      "specs": [
+        "Automatic",
+        "7 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/FFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1618262877780.png"
+    },
+    "d3ca93d2-202c-4dac-b3aa-501e0d055c9f": {
+      "denumire": "Infiniti QX80",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/awd-4x4/luxury.html",
+      "specs": [
+        "Automatic",
+        "7 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/LFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1706907788439.png"
+    },
+    "ad4b5be2-1b49-452b-972c-2ab53d786ee8": {
+      "denumire": "Volkswagen Atlas",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/awd-4x4/crossover-premium.html",
+      "specs": [
+        "Automatic",
+        "7 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/PGAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1706556373364.png"
+    },
+    "e12c483f-6615-49cf-95ca-551178f83b14": {
+      "denumire": "Chevy Suburban",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/awd-4x4/premium.html",
+      "specs": [
+        "Automatic",
+        "8 People",
+        "7 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/PFAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1618262876980.png"
+    },
+    "4ecbf2fd-0661-4e7c-a057-b6806a66d353": {
+      "denumire": "Jeep Wrangler",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/awd-4x4/jeep-wrangler-2-door.html",
+      "specs": [
+        "Automatic",
+        "4 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/IJAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714578638013.png"
+    },
+    "acaaf64d-3d36-4e97-bd0a-719cf6269751": {
+      "denumire": "Jeep Wrangler Unlimited",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/awd-4x4/jeep-wrangler-4-door.html",
+      "specs": [
+        "Automatic",
+        "5 People",
+        "5 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/SUVS/FJAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1714589982949.png"
+    },
+    "ac20dab7-88ce-48af-8bdb-d6367d7111a8": {
+      "denumire": "Chevrolet Colorado",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/awd-4x4/pickup.html",
+      "specs": [
+        "Automatic",
+        "4 People",
+        "3 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/TRUCKS/SPAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1618263047434.png"
+    },
+    "e5555aa0-d190-40d9-a38e-dc71562b3907": {
+      "denumire": "Ford F150",
+      "linkDetalii": "https://www.enterprise.com//en/car-rental/vehicles/us/awd-4x4/large-pickup.html",
+      "specs": [
+        "Automatic",
+        "4 People",
+        "4 Bags"
+      ],
+      "imagine": "https://assets.gcs.ehi.com/content/enterprise_cros/data/vehicle/bookingCountries/US/TRUCKS/PPAR.doi.352.high.imageSmallThreeQuarterNodePath.png/1512427309887.png"
+    }
+  }
+}

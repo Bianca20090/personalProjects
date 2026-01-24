@@ -1,0 +1,982 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+
+.header {
+    min-height: 100vh;
+    width: 100%;
+   
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding:1% 4%;
+    justify-content: space-between;
+    align-items: center;
+    top:0;
+    left: 0;
+    background: #5f6174;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    z-index: 3;
+    position: fixed;
+    width: 93%;
+}
+
+    nav img {
+        width: 100px;
+    }
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+  
+}
+
+    .nav-links ul li {
+        list-style: none;
+        display: inline-block;
+        padding: 8px 12px;
+        position: relative;
+    }
+
+        .nav-links ul li a {
+            color: #fff;
+            text-decoration:none;
+            font-size:15px;
+        }
+
+        .nav-links ul li::after {
+            content: ' ';
+            width: 0%;
+            height: 2px;
+            background: #A78295;
+            display: block;
+            margin: auto;
+            transition: 0.5s;
+        }
+
+    .nav-links ul li:hover::after{
+      width: 100%;
+    }
+
+
+    #submenu {
+        left: -80px;
+        opacity: 0;
+        position: absolute;
+        top: 100%; 
+        visibility: hidden;
+        z-index: 1;
+        background: #5f6174;
+        color: white;
+        display: block;
+        font-weight: bold;
+        font-size: 13px;
+        padding: 15px 55px;
+        text-align: center;
+        transition: all 0.25s ease;
+        cursor: pointer;
+        border-bottom-left-radius: 10px; 
+        border-bottom-right-radius: 10px; 
+    }
+    
+    li:hover ul#submenu {
+        opacity: 1;
+        top: 100%; 
+        visibility: visible;
+    }
+    
+    #submenu li {
+        width: 100%;
+        clear: both; 
+    }
+    
+
+    .text-box{
+        width:90%;
+        color:#fff;
+        position: absolute;
+        top:50%;
+        left: 50%;
+        transform:translate(-50%, -50%);
+        text-align: center;
+    
+    
+    }
+    
+    
+    
+    .text-box h1{
+        font-size:65px;
+    
+    }
+    .text-box p{
+        margin:10px 0 40px;
+        font-size:15px;
+        color:#fff;
+    }
+    
+    .buton-1{
+        display:inline-block;
+        text-decoration:none;
+        color:#fff;
+        border: 1px solid #fff;
+        padding: 12px 34px;
+        font-size:13px;
+        background:transparent;
+        position:relative;
+        cursor:pointer;
+    }
+    
+        .buton-1:hover {
+            border: 1px solid #A78295;
+            background: #a8a6a7;
+            transition: 1s;
+        }
+    
+        nav .fa{
+            display: none;
+        }
+       
+.icon {
+    cursor: pointer;
+    font-size:2rem;
+    padding: 0 1rem;
+    color: #A78295;
+    position: relative;
+}
+
+.icon:not(:last-child){
+    margin-right: 0.5rem;
+}
+
+.icon span{
+    position: absolute;
+
+    top: 2px;
+    right: -2px;
+    background-color: #5f6174;
+    color: #fff;
+    border-radius: 45%;
+    font-size:1.3 rem;
+    height: 2rem;
+    width: 2rem;
+    justify-content: center;
+}
+
+
+@media(max-width: 750px){
+   
+    .text-box h1 {
+        font-size: 26px;
+    }
+
+.nav-links ul li {
+    display: block;
+}
+
+.nav-links {
+   
+    background: #605366;
+    position: fixed;
+    height: 100vh;
+    width: 200px;
+    top: 0;
+    right: -200px;
+    text-align: left;
+    z-index: 2;
+    transition: 1s;
+}
+
+
+nav .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.nav-links ul {
+    padding: 25px;
+}
+
+
+.fa {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    border-radius: 5px;
+    margin: 6px 0;
+    position: absolute; 
+    top: 10px;
+    right: 10px;
+}
+
+    .fa::before,
+    .fa::after {
+        content: ""; /* Required for pseudo-elements */
+        display: block;
+        width: 30px;
+        height: 4px;
+        background-color: white;
+        position: absolute;
+    }
+
+    .fa::before {
+        top: -10px; /* Position the first line above the original line */
+        border-radius: 5px;
+    }
+
+    .fa::after {
+        top: 10px; /* Position the second line below the original line */
+        border-radius: 5px;
+    }
+
+
+.faX {
+    width: 25px;
+    height: 25px;
+    position: relative;
+}
+
+    .faX::before,
+    .faX::after {
+        content: "";
+        display: block;
+        width: 25px;
+        height: 5px;
+        background-color: white;
+        position: absolute;
+        top: 15px; /* Repozitionăm cele două linii suplimentare pe verticală */
+        left: 0;
+    }
+
+    .faX::before {
+        transform: rotate(45deg); /* Rotim linia pentru a forma X-ul */
+        border-radius: 5px;
+    }
+
+    .faX::after {
+        transform: rotate(-45deg); /* Rotim linia pentru a forma X-ul */
+        border-radius: 5px;
+    }
+
+.mobile-submenu {
+   
+    right:-200px;
+    opacity: 0;
+    position: absolute;
+    top: 35px;
+    visibility: visible;
+    background:#5f6174;
+    color: white;
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 25px 65px;
+    align-items:center;
+}
+
+#submenu {
+    display: none;
+    position: absolute;
+    top: 40px; 
+    right: 0;
+    background: rgba(95, 97, 116, 0.5);
+    color: white;
+    font-weight: bold;
+    font-size: 13px;
+    padding: 10px;
+    border-radius: 10%;
+}
+
+
+.conectareSection {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    padding-bottom: 40px;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(img/home.png);
+}
+
+    .conectareSection .conectare {
+        text-align: center;
+        background-color: rgba(63, 46, 62, 0.5);
+        padding: 100px;
+        border-radius: 25px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        backdrop-filter: blur(15px);
+    }
+
+        .conectareSection .conectare .buton-1 {
+            align-items: center;
+            top: 10px;
+        }
+
+        .conectareSection .conectare h3 {
+            font-size: 20px;
+            color: #A78295;
+        }
+    
+}
+
+
+
+/* Asta merge pe prima pagina, la o sectiune in care scriu despre companie, deci nu lasa la for sale*/
+/*La about us, pun acelasi fundal, locatiile, scurta descriere a firmei, si pun si partea asta, in care la una sa pun : propreitati de vanzarea, si de inchiriat*/
+
+
+
+
+
+.AboutInfo p {
+    margin: 10px 0 40px;
+    font-size: 15px;
+    margin-top: 100vh;
+}
+
+
+.about-us{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    max-width: 110rem;
+    margin-top: 20px;
+    
+}
+
+.about-us .about{
+    height: 25rem;
+    max-width: 35rem;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    text-align: center;
+    flex: 1;
+    border-radius: 15px;
+    margin-top: 300px;
+}
+
+.about-us .about:not( :last-child){
+    margin-right: 3 rem ;
+}
+
+.about-us .about img{ 
+    transition: all 2s ease;
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: cover;
+    border-radius: 15px; 
+    margin-top: 68px;
+}
+
+.about-us .about:hover img{
+    transform: scale(1.2);
+}
+
+.about-us .about div{
+    position: absolute;
+    left: 50%;
+    bottom: 15%;
+    transform: translateX(-50%);
+    background-color: #524e50;
+    width: 15rem;
+    height: 5rem;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 5rem;
+    border-radius: 15px;
+}
+
+.about a {
+    text-decoration: none; /* Elimină sublinierea implicită a legăturii */
+    color: white; /* Textul să fie alb */
+}
+
+.about a:link {
+    color: white; /* Culorea textul alb când este o legătură nevizitată (când nu a fost făcut clic) */
+}
+
+.about a:hover {
+    color: rgb(83, 42, 77); /* Culorea textul roșu când a fost vizitat (după ce a fost făcut clic) */
+}
+
+
+@media (max-width: 700px) {
+    .section {
+        padding: 5rem 0;
+    }
+
+    .about-us {
+        flex-direction: column;
+        padding: 3rem;
+    }
+
+    .about-us .about {
+        max-width: 100%;
+        height: 30rem;
+        margin-top: -300px;
+        
+    }
+
+    .about-us .about:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 5rem;
+    }
+
+    .about-us .about img {
+        width: 25rem;
+        height: 20rem;
+    }
+
+    .about-us .about img {
+        width: 100%;
+    }
+    @media (max-width: 700px) {
+    .section {
+        padding: 5rem 0;
+    }
+
+    .about-us {
+        flex-direction: column;
+        padding: 3rem;
+    }
+
+    .about-us .about {
+        max-width: 100%;
+        height: 30rem;
+    }
+
+    .about-us .about:not(:last-child) {
+        margin-right: 0;
+        margin-bottom: 5rem;
+    }
+
+    .about-us .about img {
+        width: 25rem;
+        height: 20rem;
+    }
+
+    .about-us .about img {
+        width: 100%;
+    }
+}
+}
+/*Mai sus, la media, o mica problema la submeniu daca merg pe sectiunea noua*/
+
+
+/*For Saleee*/
+.automobile-inchiriere {
+    background-image: linear-gradient(rgba(4, 9, 30, 0.3), rgba(4, 9, 30, 0.8)), url(img/home.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh; 
+    position: relative;
+}
+
+.titlu{
+    text-align: center;
+    margin-top: 0; 
+    color: #fff;
+}
+
+.titlu h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    font-weight: 500;
+   
+}
+
+.automobile-auto {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 2rem; 
+}
+
+
+.automobile {
+    position: relative;
+    width: 20%; 
+    margin: 0 auto;
+    margin-bottom: 2rem; 
+    border-radius: 10px; 
+    overflow: hidden; 
+}
+
+
+
+
+.prop {
+    width: 100%;
+    height: auto; 
+    object-fit: cover;
+    transition: all 1s linear;
+    border-radius: 10px; 
+}
+
+
+.prop-info {
+    padding: 1rem;
+    text-align: center;
+    color: #fff; 
+}
+
+.prop-info span{
+    display: inline-block;
+    font-size: 1.2rem;
+    font-weight: bold; 
+    color: #b89eab;
+    margin-bottom: 1rem;
+}
+
+.prop-info a {
+    display: block;
+    font-size: 1rem;
+   margin-bottom: 1rem;
+    transition: all 500ms linear;
+    color: #fff; 
+}
+.prop-info a:hover{
+color: #605366;
+}
+
+
+
+
+ 
+ 
+
+
+
+ .back-button {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+.back-button a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 24px;
+}
+
+.back-button i {
+    font-size: 24px;
+}
+
+
+
+
+
+
+
+/* Alte stiluri pentru .automobile și .icon aici */
+
+
+
+@media (max-width: 768px) {
+    .automobile {
+      width: 45%; 
+      margin: 0 auto;
+      margin-bottom: 2rem;
+      
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .automobile {
+      width: 100%; 
+  
+    }
+  }
+  
+
+
+  /*sectiunea Contact*/
+
+  .Contact{
+    position: relative;
+    background-image: linear-gradient(rgba(4,9,30,0.3), rgba(4,9,30,0.8)), url(img/home.png);
+    padding: 14rem;
+  }
+
+  .Contact .metode p
+  {
+    display: block;
+    font-size: 1.5rem;
+    margin-bottom: 1.5rem;
+    color: black;
+
+  }
+
+  .Contact h1{
+    font-size: 5rem;
+    color: #605366;
+    margin-bottom: 1.5rem;
+  }
+
+
+  .Contact .conImg img{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40rem;
+    border-radius: 15%;
+  }
+
+  @media screen and (max-width: 768px) {
+    .Contact {
+      padding: 14rem 0; 
+    }
+  
+    .Contact h1 {
+      font-size: 2rem; 
+      margin-bottom: 0; 
+    }
+    .Contact .metode p {
+        font-size: 0.8rem; 
+        margin-bottom: 1rem; 
+      }
+    
+    .Contact .conImg img {
+      width: 20rem; 
+      margin-top: 1rem; 
+    }
+  }
+
+
+
+
+  /*Aici ai partea de log in*/
+  
+  .conectareSection {
+    position:relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px 60px;
+    padding-bottom: 60px;
+    background-image: linear-gradient(rgba(4,9,30,0.3), rgba(56, 59, 71, 0.8)), url(img/home.png);
+   transition: transform .3s ease ,height .5s ease;
+   overflow: hidden;
+   background-size: cover;
+
+   
+
+}
+
+
+    .conectareSection .conectare {
+        text-align: center;
+        background-color: rgba(119, 117, 119, 0.288);
+        padding: 150px; 
+        border-radius: 25px; 
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.491); /* Umbră sub cadru */
+        backdrop-filter: blur(15px);
+        position:relative;
+        overflow:hidden;
+        transition: transform .3s ease ,height .5s ease;
+       
+    }
+    
+        .conectare h3 {
+            font-size: 30px;
+            color: #2c282a;
+            text-align: center;
+            
+        }
+
+.conectareSection .conectare.logIN{
+  transition: transform .15s ease-in-out;
+  transform: translateX(0);
+  z-index: 2;
+  opacity: 1;
+}
+
+
+
+.conectareSection.active .conectare.logIN{
+    transition: none;
+    transform: translateX(0);
+    z-index: 1;
+    opacity: 0;
+
+}
+
+
+
+.conectareSection.active .conectare.register{
+    transition: transform .15s easet;
+    transform: translateX(0);
+    z-index: 2;
+    opacity: 1;
+}
+
+.conectareSection .conectare.register{
+    position: absolute;
+    transition:none ;
+   transform: translateX(0);
+   z-index: 1;
+   opacity: 0;
+
+    
+}
+
+
+
+.input-conect{
+            position:relative;
+            width:100%;
+            height:50px;
+            border-bottom: 2px solid #2c282a;
+            margin:30px 0;
+            color: #2c282a;
+            font-weight: bold;
+            
+        }
+
+        .input-conect .icon{
+            position:absolute;
+            right:8px;
+            font: size 1.3px;;
+            color: #2c282a;
+            line-height:58px;
+        }
+
+        .input-conect label{
+            position:absolute;
+            top:50%;
+            left: 5px;
+            transform: translateY(-50%);
+            font-size:1em;
+            color: #2c282a;
+            font-weight:bold;
+            pointer-events:none;
+            transition:0.3s;
+        }
+
+        .input-conect input:focus ~ label,
+        .input-conect input:valid ~ label {
+    top: -3px;
+}
+
+        .input-conect input{
+            width: 100%;
+            height: 100%;
+            background: transparent;
+            border: none;
+            outline: none;
+            font-size: .9em;
+            font-weight: bold;
+            padding: 0 35px 0 5px;
+            color: #2c282a;
+        }
+
+
+        .conectareSection .icon-close {
+            position: absolute;
+            top:0;
+            right: 0;
+            width: 45px;
+            height: 45px;
+            font-size: 2em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #EFE1D1;
+            cursor: pointer;
+            z-index: 1;
+          
+        }
+
+ .rememberBox{
+    font-size: .8em;
+    color: #A78295;
+    font-weight: 600;
+    justify-content: space-between;
+    margin: -15px 0 15px;
+    display: flex;
+
+}
+
+.rememberBox label input{
+    accent-color: #2c282a ;
+    margin-right: 3px;
+}
+
+.rememberBox a{
+    color: #A78295;
+    text-decoration:none;
+}
+.rememberBox a:hover{
+    color:#b95086;
+    text-decoration: underline;
+}
+
+.log-reg p {
+    color: #2c282a;
+    margin-top: 30px;
+    font-size: 14px;
+    font-weight:500;
+}
+.log-reg p a{
+    color:#c5bfb9;
+    text-decoration:none;
+}
+.log-reg p a:hover{
+    color:#000000;
+    text-decoration:underline;
+}
+
+.conectareSection .buton-1 {
+    margin-top: 20px;
+    color: #2c282a;
+    font-weight: bold;
+}
+
+
+
+.conectareSection .conectare.register .message{
+    margin: 5px 0;
+    width: 100%;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    background-color: #5f6174;
+    font-size: 20px;
+}
+
+.conectareSection .conectare {
+    padding: 150px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .conectareSection .conectare {
+      padding: 50px; 
+    }
+  
+    .conectare h3 {
+      font-size: 24px; 
+    }
+  
+    .input-conect {
+      margin: 15px 0; 
+    }
+  
+    .conectareSection .buton-1 {
+      margin-top: 10px; 
+    }
+  
+    .conectareSection .conectare.register .message {
+      font-size: 16px; 
+      padding: 8px; 
+    }
+  }
+  
+
+  /*MEEEEEEEEEEEEEEEEEEEEEEE*/
+
+  .Userpage{
+    background-image: linear-gradient(rgba(4, 9, 30, 0.3), rgba(4, 9, 30, 0.8)), url(img/home.png);
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh; 
+    position: relative;
+  }
+
+  .Userpage .mainpage{
+    background-color: rgba(63, 46, 62, 0.5);
+    padding: 10px; 
+    border-radius: 25px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Umbră sub cadru */
+    backdrop-filter: blur(15px);
+    position:relative;
+    overflow:hidden;
+    transition: transform .3s ease ,height .5s ease;
+  }
+  .Userpage .mainpage img{
+    width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  border: 3px solid #fff;
+  margin-right: 20px; /* Adaugă spațiu între imagine și text */
+  margin-top: -150px; /* Ridică imaginea mai sus */
+}
+
+.Userpage .mainpage .icon-close {
+    position: absolute;
+    top:0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #EFE1D1;
+    cursor: pointer;
+    z-index: 1;
+  
+}
+
+.Userpage .mainpage h3,
+.Userpage .mainpage p {
+    margin-top: 20px;
+  color: #fff;
+  text-align: left;
+  margin-left:200px ;
+}
+
+.Userpage .mainpage h3 {
+  font-size: 24px;
+}
+
+/*Furnizor------------------------------------------*/
+
+.furnizori {
+    min-height: 100vh;
+    width: 130%;
+    background-image: linear-gradient(rgba(81, 84, 96, 0.3), rgba(91, 94, 106, 0.8)), url(img/home.png);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+
+.furnizori img{
+    padding: 20px;
+
+}
+
+.furnizori h1 {
+    color: rgb(11, 11, 11);
+    text-align: center;
+    margin-top: 0; /* Elimină margin-ul de sus implicit */
+    margin-bottom: 30px;
+}
+
+.furnizori .body {
+    overflow-y: hidden; /* Elimină bara de derulare verticală */
+    overflow-x: hidden; /* Elimină bara de derulare orizontală */
+}
+
+.furnizori p1, .furnizori p3 {
+    color: rgb(14, 14, 14);
+    font-size: 19px;
+
+}
+
+
