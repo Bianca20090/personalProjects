@@ -85,25 +85,25 @@
         </tbody>
     </table>
     <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-database.js";
+        import { initializeApp } from "https://www.gstatic.com/firebasejs";
+        import { getDatabase, ref, onValue } from "https://www.gstatic.com/firebasejs";
 
-        // Configurația Firebase
+       
         const firebaseConfig = {
-            apiKey: "AIzaSyAsUUmj-UxOTh6phvTQQo9btmD48UdvJaI",
-            authDomain: "autoadvicedb.firebaseapp.com",
-            databaseURL: "https://autoadvicedb-default-rtdb.firebaseio.com",
+            apiKey:,
+            authDomain: ,
+            databaseURL: ,
             projectId: "autoadvicedb",
             storageBucket: "autoadvicedb.appspot.com",
-            messagingSenderId: "293295777219",
-            appId: "1:293295777219:web:4a9eee9af17bca84f24976"
+            messagingSenderId: ,
+            appId: 
         };
 
         // Inițializare Firebase
         const app = initializeApp(firebaseConfig);
         const db = getDatabase(app);
 
-        // Referință către nodul "preturiCombustibil"
+      
         const fuelPricesRef = ref(db, 'preturiCombustibil');
 
         // Funcție pentru a popula dropdown-ul cu cheile (datele) din Firebase
@@ -112,10 +112,10 @@
                 const fuelPrices = snapshot.val();
                 const dateSelect = document.getElementById('dateSelect');
 
-                // Curățăm dropdown-ul înainte de a afișa noile date
+               
                 dateSelect.innerHTML = '';
 
-                // Colectăm și sortăm datele
+                
                 const dates = Object.keys(fuelPrices).sort((a, b) => new Date(a) - new Date(b));
 
                 // Iterăm prin date și adăugăm opțiuni în dropdown
@@ -157,7 +157,7 @@
             });
         }
 
-        // Apelăm funcția pentru a popula dropdown-ul la încărcarea paginii
+       
         window.onload = populateDropdown;
 
         // Adăugăm un eveniment pentru a afișa datele selectate din dropdown
@@ -171,3 +171,4 @@
     </script>
 </body>
 </html>
+
