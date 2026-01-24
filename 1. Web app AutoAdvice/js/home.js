@@ -54,7 +54,6 @@ const contactButton = document.querySelector('.buton-1');
 
 
 
-//aici pt log in
 
 const conectareSection= document.querySelector('.conectareSection');
 const conLinkLog= document.querySelector('.log-link');
@@ -88,4 +87,5 @@ function afiseazaFormular() {
 function ascundeFormular() {
     document.getElementById('blur-overlay').style.display = 'none';
     document.getElementById('formular-container').style.display = 'none';
+
 }
