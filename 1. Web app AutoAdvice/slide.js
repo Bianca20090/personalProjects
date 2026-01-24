@@ -3,21 +3,21 @@ require("firebase/database");
 const fs = require('fs');
 const { resolve } = require('path');
 
-// Import the functions you need from the SDKs you need
+
 const { initializeApp } = require("firebase/app");
 
-// Your web app's Firebase configuration
+
 const firebaseConfig = {
-  apiKey: "AIzaSyAsUUmj-UxOTh6phvTQQo9btmD48UdvJaI",
-  authDomain: "autoadvicedb.firebaseapp.com",
-  databaseURL: "https://autoadvicedb-default-rtdb.firebaseio.com",
+  apiKey: "***",
+  authDomain: "***.firebaseapp.com",
+  databaseURL: "https://***.firebaseio.com",
   projectId: "autoadvicedb",
   storageBucket: "autoadvicedb.appspot.com",
-  messagingSenderId: "293295777219",
-  appId: "1:293295777219:web:4a9eee9af17bca84f24976"
+  messagingSenderId: "***",
+  appId: "***"
 };
 
-// Initialize Firebase
+
 const app = initializeApp(firebaseConfig);
 
 class PopulateJsonDatabase {
@@ -64,9 +64,9 @@ class PopulateJsonDatabase {
   }
 }
 
-// Funcție principală pentru a încapsula codul asincron
+
 async function main() {
-  // Instantiation and data processing
+
   const populator = new PopulateJsonDatabase();
   const jsonData = await populator.loadDataFromJson('dataEnterprise.json');
   if (jsonData) {
@@ -77,3 +77,4 @@ async function main() {
 }
 
 main();
+
