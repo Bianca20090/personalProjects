@@ -1,12 +1,12 @@
 const admin = require('firebase-admin');
 
 // Calea către fișierul JSON cu cheile de autentificare descărcat din Consola Firebase
-const serviceAccount = require("./autoadvicedb-firebase-adminsdk-i2p0c-fa0929f43b.json");
+const serviceAccount = require("./***-firebase-adminsdk-i2p0c-fa0929f43b.json");
 
 // Inițializare Firebase Admin SDK
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://autoadvicedb-default-rtdb.firebaseio.com" // URL-ul bazei de date
+  databaseURL: "https://***.firebaseio.com" 
 });
 
 const db = admin.database();
@@ -35,7 +35,6 @@ async function combinaDate() {
         if (anunt.denumire === detalii.denumire) {
           const anuntCombinat = { ...anunt, ...detalii };
 
-          // Salvare în noua colecție
           await anunturiCombinatRef.child(anuntId).set(anuntCombinat);
           break;
         }
@@ -48,5 +47,6 @@ async function combinaDate() {
   }
 }
 
-// Apelăm funcția pentru a combina datele
+
 combinaDate();
+
