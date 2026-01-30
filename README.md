@@ -1,5 +1,5 @@
 Hello!
-This repository showcases a collection of personal projects that highlight my skills in web development, database management, and software engineering. The applications cover a wide range of technologies including JavaScript, Node.js, Firebase, Java, MySQL, C#, SQL, and APIs, 
+This repository showcases a collection of personal projects that highlight my skills in web development, database management, and software engineering. The applications cover a wide range of technologies including JavaScript, Node.js, Firebase, Java, MySQL, VBA, C#, SQL, and APIs, 
 demonstrating my ability to design, implement, and optimize full-stack solutions.
 
 
@@ -12,6 +12,23 @@ demonstrating my ability to design, implement, and optimize full-stack solutions
 * Built personalized user profiles that allow saving favorite listings, generating tailored recommendations, and tracking browsing history.
 * Additional documentation and application screenshots are available in the repository under Car_app.pdf.
 
+
+ Flower Shop App (C#)
+
+* Developed a point-of-sale desktop application for a flower shop.
+* Implemented stock management and product selection features, ensuring real-time inventory verification.
+* Built automatic invoice generation with formatted outputs for customer transactions.
+* Designed an intuitive graphical user interface (WinForms/WPF) with a focus on usability.
+* Applied object-oriented principles to keep the codebase modular and maintainable.
+
+
+Process Automation Tool (Excel VBA)
+
+* Developed an Excel VBA (Macro) automation tool to optimize repetitive audit-related tasks and significantly reduce processing time.
+* Implemented a cross-file ID search mechanism, automatically validating IDs between two Excel workbooks.
+* Designed conditional logic to verify predefined criteria (e.g. trade date and transaction type).
+* Automatically extracted and transferred validated data from the source file to the target file at specified locations.
+* Added visual indicators (cell color-coding) for each processed LX, supporting further testing activities within CLO audit procedures.
 
 
   Quiz App (Java, MySQL)
@@ -35,12 +52,5 @@ demonstrating my ability to design, implement, and optimize full-stack solutions
 * Applied data normalization techniques to improve storage efficiency and maintain data integrity.
 
 
- Flower Shop App (C#)
-
-* Developed a point-of-sale desktop application for a flower shop.
-* Implemented stock management and product selection features, ensuring real-time inventory verification.
-* Built automatic invoice generation with formatted outputs for customer transactions.
-* Designed an intuitive graphical user interface (WinForms/WPF) with a focus on usability.
-* Applied object-oriented principles to keep the codebase modular and maintainable.
 
 
