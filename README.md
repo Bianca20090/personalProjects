@@ -12,6 +12,7 @@ This repository showcases a collection of personal projects that highlight my sk
 * Additional documentation and application screenshots are available in the repository under Car_app.pdf.
 
 
+
   The Adventure Hub – Business Intelligence & Data Analytics Dashboard (Power BI)
   
 * Developed an interactive Power BI reporting solution designed to support management in monitoring business performance and making data-driven decisions.
