@@ -1,6 +1,5 @@
 Hello!
-This repository showcases a collection of personal projects that highlight my skills in web development, database management, and software engineering. The applications cover a wide range of technologies including JavaScript, Node.js, Firebase, Java, MySQL, VBA, C#, SQL, and APIs, 
-demonstrating my ability to design, implement, and optimize full-stack solutions.
+This repository showcases a collection of personal projects that highlight my skills in software development, database management, data analytics, and business intelligence. The projects cover a wide range of technologies, including JavaScript, Node.js, Firebase, Java, MySQL, VBA, C#, SQL, APIs, and Power BI, demonstrating my ability to design, develop, optimize, and visualize data-driven solutions across different domains.
 
 
   Web App for Car Rentals (JavaScript, HTML, CSS, Firebase, Node.js)
@@ -11,6 +10,21 @@ demonstrating my ability to design, implement, and optimize full-stack solutions
 * Integrated Firebase Authentication for secure user login and profile management.
 * Built personalized user profiles that allow saving favorite listings, generating tailored recommendations, and tracking browsing history.
 * Additional documentation and application screenshots are available in the repository under Car_app.pdf.
+
+
+  The Adventure Hub – Business Intelligence & Data Analytics Dashboard (Power BI)
+  
+* Developed an interactive Power BI reporting solution designed to support management in monitoring business performance and making data-driven decisions.
+* Performed data cleaning, transformation, and preparation using Power Query to ensure data quality, consistency, and reliability across reports.
+* Developed custom measures and calculated metrics using DAX to provide deeper business insights and enable advanced performance analysis.
+* Created multiple dashboards for tracking key performance indicators (KPIs), comparing regional performance, analyzing product-level trends, and identifying high-value customers.
+* Designed and implemented data models, calculated measures, and business metrics using Power Query and DAX.
+* Built dynamic and interactive visualizations, including KPI cards, line charts, maps, bar charts, trend analyses, and slicers, enabling users to explore data from multiple perspectives.
+* Implemented filtering and drill-down capabilities to facilitate deeper analysis and improve insight generation.
+* Integrated a geographic map visualization to display store locations worldwide and provide a global overview of business operations.
+* Implemented role-based analysis by continent, allowing users and managers to monitor performance and compare results across different geographic regions.
+* Transformed complex datasets into clear and intuitive visual reports, allowing managers to quickly identify trends, opportunities, and areas requiring attention.
+* Delivered a centralized business intelligence solution that enhances reporting efficiency and supports strategic decision-making.
 
 
  Flower Shop App (C#)
