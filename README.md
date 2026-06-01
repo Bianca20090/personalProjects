@@ -2,16 +2,6 @@ Hello!
 This repository showcases a collection of personal projects that highlight my skills in software development, database management, data analytics, and business intelligence. The projects cover a wide range of technologies, including JavaScript, Node.js, Firebase, Java, MySQL, VBA, C#, SQL, APIs, and Power BI, demonstrating my ability to design, develop, optimize, and visualize data-driven solutions across different domains.
 
 
-  Web App for Car Rentals (JavaScript, HTML, CSS, Firebase, Node.js)
-
-* Developed a car rental web platform featuring advanced search and filtering functionality.
-* Implemented a custom web scraping script (Node.js) to automatically extract images and general information about vehicles from external sources.
-* Designed a progressive database update mechanism, ensuring that new listings and vehicle details are consistently added without overwriting existing data.
-* Integrated Firebase Authentication for secure user login and profile management.
-* Built personalized user profiles that allow saving favorite listings, generating tailored recommendations, and tracking browsing history.
-* Additional documentation and application screenshots are available in the repository under Car_app.pdf.
-
-
 
   The Adventure Hub – Business Intelligence & Data Analytics Dashboard (Power BI)
   
@@ -26,6 +16,17 @@ This repository showcases a collection of personal projects that highlight my sk
 * Implemented role-based analysis by continent, allowing users and managers to monitor performance and compare results across different geographic regions.
 * Transformed complex datasets into clear and intuitive visual reports, allowing managers to quickly identify trends, opportunities, and areas requiring attention.
 * Delivered a centralized business intelligence solution that enhances reporting efficiency and supports strategic decision-making.
+
+
+ Web App for Car Rentals (JavaScript, HTML, CSS, Firebase, Node.js)
+
+* Developed a car rental web platform featuring advanced search and filtering functionality.
+* Implemented a custom web scraping script (Node.js) to automatically extract images and general information about vehicles from external sources.
+* Designed a progressive database update mechanism, ensuring that new listings and vehicle details are consistently added without overwriting existing data.
+* Integrated Firebase Authentication for secure user login and profile management.
+* Built personalized user profiles that allow saving favorite listings, generating tailored recommendations, and tracking browsing history.
+* Additional documentation and application screenshots are available in the repository under Car_app.pdf.
+
 
 
  Flower Shop App (C#)
