@@ -1,6 +1,7 @@
 Hello!
-This repository showcases a collection of personal projects that highlight my skills in software development, database management, data analytics, and business intelligence. The projects cover a wide range of technologies, including JavaScript, Node.js, Firebase, Java, MySQL, VBA, C#, SQL, APIs, and Power BI, demonstrating my ability to design, develop, optimize, and visualize data-driven solutions across different domains.
+Welcome to my portfolio! This repository showcases a collection of personal and academic projects that demonstrate my interest in data analytics, business intelligence, process automation, and software development. Throughout these projects, I have worked with technologies such as SQL, Power BI, Tableau, Excel VBA, JavaScript, Node.js, Firebase, Java, C#, MySQL, and REST APIs to analyze data, build interactive dashboards, automate repetitive processes, and develop full-stack applications.
 
+The projects reflect both my academic background in Economic Informatics and my continuous learning in data analysis and business intelligence, with a focus on transforming data into meaningful insights and practical solutions.
 
 
   The Adventure Hub – Business Intelligence & Data Analytics Dashboard (Power BI)
@@ -17,6 +18,20 @@ This repository showcases a collection of personal projects that highlight my sk
 * Transformed complex datasets into clear and intuitive visual reports, allowing managers to quickly identify trends, opportunities, and areas requiring attention.
 * Delivered a centralized business intelligence solution that enhances reporting efficiency and supports strategic decision-making.
 
+Stock Market Trend & Comparison Dashboards (Tableau) https://public.tableau.com/views/StocksDashboard_17866498829770/StocksPerformanceDashboard?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link  & https://public.tableau.com/views/IndividualStocksDashboard/IndividualStockTracker?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link
+
+* Developed interactive Tableau dashboards to analyze stock price movements, long-term trends, and market volatility.
+* Created visualizations comparing the performance of five companies using dynamic filters, parameters, and interactive charts.
+* Applied calculated fields, trend analysis, and dashboard actions to enable users to explore financial data from multiple perspectives.
+* Designed intuitive dashboards that support comparative analysis and facilitate data-driven decision-making.
+
+MLB Player & Financial Analysis Database (SQL)
+
+* Queried a relational database containing Major League Baseball player salaries, team information, and financial statistics.
+* Wrote complex SQL queries using CTEs, Window Functions (ROW_NUMBER(), SUM() OVER), INNER JOINs, subqueries, and aggregations.
+* Calculated cumulative team spending, salary rankings, percentile distributions, and player performance metrics.
+* Produced analytical reports that transformed raw relational data into meaningful business insights.
+
 
  Web App for Car Rentals (JavaScript, HTML, CSS, Firebase, Node.js)
 
@@ -27,6 +42,13 @@ This repository showcases a collection of personal projects that highlight my sk
 * Built personalized user profiles that allow saving favorite listings, generating tailored recommendations, and tracking browsing history.
 * Additional documentation and application screenshots are available in the repository under Car_app.pdf.
 
+Process Automation Tool (Excel VBA)
+
+* Developed Excel VBA automation tool to optimize repetitive audit-related tasks and significantly reduce manual processing time.
+* Implemented cross-workbook validation to automatically compare identifiers between multiple Excel files.
+* Designed conditional logic to verify business rules, including trade dates and transaction types.
+* Automated data extraction and transfer between workbooks while maintaining data consistency.
+* Added visual status indicators through conditional formatting to support CLO audit testing workflows.
 
 
  Flower Shop App (C#)
